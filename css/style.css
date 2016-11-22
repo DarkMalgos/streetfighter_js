@@ -8,4 +8,146 @@
     height: 662px;
     background: url("../images/Menu/fond%20menu.jpg") no-repeat;
     background-size: 100% 100%;
+    position: relative;
+}
+
+#menu #logo{
+    width: 340px;
+    height: 262px;
+    background: url('../images/Menu/LogoMenu.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+}
+
+#menu #start{
+    display: none;
+    width: 100px;
+    height: 50px;
+    top: 40%;
+    left: 45%;
+    position: absolute;
+    text-align: center;
+}
+
+#start p{
+    font-weight: bold;
+    font-size: 50px;
+    color: yellow;
+}
+
+#menu #exit{
+    display: none;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 46.5%;
+    text-align: center;
+}
+
+#exit p{
+    font-weight: bold;
+    font-size: 50px;
+    color: yellow;
+}
+
+#select_player{
+    display: none;
+    width: 100%;
+    height: 662px;
+    background: black;
+    position: relative;
+}
+
+#select_player #message_player{
+    width: 100%;
+    height: 30px;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    font-size: 65px;
+    margin-left: -2.5%;
+}
+
+#select_player #perso1{
+    width: 150px;
+    height: 150px;
+    background: green;
+    position: absolute;
+    top: 35%;
+    left: 31.5%;
+}
+
+#select_player #perso2{
+    width: 150px;
+    height: 150px;
+    background: blue;
+    position: absolute;
+    top: 35%;
+    left: 42.5%;
+}
+
+#select_player #perso3{
+    width: 150px;
+    height: 150px;
+    background: red;
+    position: absolute;
+    top: 35%;
+    left: 53.75%;
+}
+
+#select_player #perso4{
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    position: absolute;
+    top: 58%;
+    left: 31.5%;
+}
+
+#select_player #perso5{
+    width: 150px;
+    height: 150px;
+    background: pink;
+    position: absolute;
+    top: 58%;
+    left: 42.5%;
+}
+
+#select_player #perso6{
+    width: 150px;
+    height: 150px;
+    background: purple;
+    position: absolute;
+    top: 58%;
+    left: 53.75%;
+}
+
+
+#select_stage{
+    display: none;
+    width: 100%;
+    height: 662px;
+    background: black;
+    position: relative;
+}
+
+#select-stage #message_stage{
+    width: 100%;
+    height: 300px;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    font-size: 65px;
+    margin-left: -2.5%;
+}
+
+#figh{
+    display: none;
+    width: 100%;
+    height: 662px;
+    background: red;
+    position: relative;
 }
