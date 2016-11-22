@@ -31,3 +31,10 @@ function show_select_player(){
 
 var s = document.getElementById("start");
 s.addEventListener('click', show_select_player);
+
+function player1_select_perso(){
+    
+}
+
+var sp = document.getElementById('select_player');
+sp.addEventListener('onkeypress', player1_select_perso);

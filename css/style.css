@@ -25,20 +25,32 @@
     display: none;
     width: 100px;
     height: 50px;
-    background: yellow;
     top: 40%;
-    left: 46.5%;
+    left: 45%;
     position: absolute;
+    text-align: center;
+}
+
+#start p{
+    font-weight: bold;
+    font-size: 50px;
+    color: yellow;
 }
 
 #menu #exit{
     display: none;
     width: 100px;
     height: 50px;
-    background: blue;
     position: absolute;
     top: 50%;
     left: 46.5%;
+    text-align: center;
+}
+
+#exit p{
+    font-weight: bold;
+    font-size: 50px;
+    color: yellow;
 }
 
 #select_player{
@@ -48,6 +60,61 @@
     background: black;
     position: relative;
 }
+
+#select_player #perso1{
+    width: 150px;
+    height: 150px;
+    background: green;
+    position: absolute;
+    top: 35%;
+    left: 31.5%;
+}
+
+#select_player #perso2{
+    width: 150px;
+    height: 150px;
+    background: blue;
+    position: absolute;
+    top: 35%;
+    left: 39.5%;
+}
+
+#select_player #perso3{
+    width: 150px;
+    height: 150px;
+    background: red;
+    position: absolute;
+    top: 35%;
+    left: 47.5%;
+}
+
+#select_player #perso4{
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    position: absolute;
+    top: 51.5%;
+    left: 31.5%;
+}
+
+#select_player #perso5{
+    width: 150px;
+    height: 150px;
+    background: pink;
+    position: absolute;
+    top: 51.5%;
+    left: 39.5%;
+}
+
+#select_player #perso6{
+    width: 150px;
+    height: 150px;
+    background: purple;
+    position: absolute;
+    top: 51.5%;
+    left: 47.5%;
+}
+
 
 #select_stage{
     display: none;
