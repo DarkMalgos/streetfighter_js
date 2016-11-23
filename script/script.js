@@ -51,15 +51,15 @@ function p_select(nb_perso){
     console.log(pl1 + ' ' + pl2);
 }
 
-var p1 = document.getElementById("perso1");
+var p1 = document.getElementById("Ryu");
 p1.addEventListener('click', p_select);
-/*var p2 = document.getElementById("perso2");
+var p2 = document.getElementById("ChunLi");
 p2.addEventListener('click', p_select);
-var p3 = document.getElementById('perso3');
+var p3 = document.getElementById('Ken');
 p3.addEventListener('click', p_select);
-var p4 = document.getElementById('perso4');
+var p4 = document.getElementById('Guile');
 p4.addEventListener('click', p_select);
-var p5 = document.getElementById('perso5');
+var p5 = document.getElementById('Akuma');
 p5.addEventListener('click', p_select);
-var p6 = document.getElementById('perso6');
-p6.addEventListener('click', p_select);*/
+var p6 = document.getElementById('DeeJay');
+p6.addEventListener('click', p_select);

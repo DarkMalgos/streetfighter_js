@@ -80,55 +80,61 @@ p {
     margin-left: -2.5%;
 }
 
-#select_player #perso1{
+#select_player #Ryu{
     width: 150px;
     height: 150px;
-    background: green;
+    background: url('../images/selectfaces/Ryu_face.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 35%;
     left: 31.5%;
 }
 
-#select_player #perso2{
+#select_player #ChunLi{
     width: 150px;
     height: 150px;
-    background: blue;
+    background: url('../images/selectfaces/ChunLi_face.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 35%;
     left: 42.5%;
 }
 
-#select_player #perso3{
+#select_player #Ken{
     width: 150px;
     height: 150px;
-    background: red;
+    background: url('../images/selectfaces/Ken_face.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 35%;
     left: 53.75%;
 }
 
-#select_player #perso4{
+#select_player #Guile{
     width: 150px;
     height: 150px;
-    background: yellow;
+    background: url('../images/selectfaces/Guile_face.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 58%;
     left: 31.5%;
 }
 
-#select_player #perso5{
+#select_player #Akuma{
     width: 150px;
     height: 150px;
-    background: pink;
+    background: url('../images/selectfaces/Akuma_face.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 58%;
     left: 42.5%;
 }
 
-#select_player #perso6{
+#select_player #DeeJay{
     width: 150px;
     height: 150px;
-    background: purple;
+    background: url('../images/selectfaces/DeeJay_face.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 58%;
     left: 53.75%;
