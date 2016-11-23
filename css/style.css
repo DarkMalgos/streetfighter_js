@@ -87,7 +87,7 @@ p {
     background-repeat: no-repeat;
     position: absolute;
     top: 35%;
-    left: 31.5%;
+    left: 16.5%;
 }
 
 #select_player #ChunLi{
@@ -97,7 +97,7 @@ p {
     background-repeat: no-repeat;
     position: absolute;
     top: 35%;
-    left: 42.5%;
+    left: 25.5%;
 }
 
 #select_player #Ken{
@@ -107,7 +107,7 @@ p {
     background-repeat: no-repeat;
     position: absolute;
     top: 35%;
-    left: 53.75%;
+    left: 34.75%;
 }
 
 #select_player #Guile{
@@ -116,8 +116,8 @@ p {
     background: url('../images/selectfaces/Guile_face.png');
     background-repeat: no-repeat;
     position: absolute;
-    top: 58%;
-    left: 31.5%;
+    top: 35%;
+    left: 56.5%;
 }
 
 #select_player #Akuma{
@@ -126,8 +126,8 @@ p {
     background: url('../images/selectfaces/Akuma_face.png');
     background-repeat: no-repeat;
     position: absolute;
-    top: 58%;
-    left: 42.5%;
+    top: 35%;
+    left: 65.5%;
 }
 
 #select_player #DeeJay{
@@ -136,8 +136,8 @@ p {
     background: url('../images/selectfaces/DeeJay_face.png');
     background-repeat: no-repeat;
     position: absolute;
-    top: 58%;
-    left: 53.75%;
+    top: 35%;
+    left: 73.75%;
 }
 
 
