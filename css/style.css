@@ -1,6 +1,15 @@
+@font-face {
+    font-family: FontSF;
+    src: url('../police/policesf.ttf');
+}
+
 *{
     padding: 0;
     margin: 0;
+}
+
+p {
+    font-family: FontSF;
 }
 
 #menu{
@@ -134,7 +143,7 @@
     position: relative;
 }
 
-#select-stage #message_stage{
+#select_stage #message_stage{
     width: 100%;
     height: 30%;
     color: yellow;
