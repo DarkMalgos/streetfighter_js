@@ -38,8 +38,8 @@ s.addEventListener('click', show_select_player);
 
 function p_select(){
     mp = document.getElementById('message_player');
-    if (mp.textContent == "Player1 select your perso")
-        mp.textContent = "Player2 select your perso";
+    if (mp.textContent == "Player 1 select your perso")
+        mp.textContent = "Player 2 select your perso";
     else{
         var sp = document.getElementById('select_player');
         sp.style.display = 'none';
