@@ -1,5 +1,5 @@
-var pl1,
-    pl2,
+var pl1 = 0,
+    pl2 = 0,
     stage;
 
 function show_menu(){
@@ -36,21 +36,24 @@ function show_select_player(){
 var s = document.getElementById("start");
 s.addEventListener('click', show_select_player);
 
-function p_select(){
+function p_select(nb_perso){
     mp = document.getElementById('message_player');
-    if (mp.textContent == "Player1 select your perso")
-        mp.textContent = "Player2 select your perso";
-    else{
+    if (mp.textContent == "Player 1 select your perso"){
+        console.log("toto");
+        mp.textContent = "Player 2 select your perso";
+    }else{
+        console.log("titi"); 
         var sp = document.getElementById('select_player');
         sp.style.display = 'none';
         var ss = document.getElementById('select_stage');
         ss.style.display = 'block';
     }
+    console.log(pl1 + ' ' + pl2);
 }
 
 var p1 = document.getElementById("perso1");
 p1.addEventListener('click', p_select);
-var p2 = document.getElementById("perso2");
+/*var p2 = document.getElementById("perso2");
 p2.addEventListener('click', p_select);
 var p3 = document.getElementById('perso3');
 p3.addEventListener('click', p_select);
@@ -59,4 +62,4 @@ p4.addEventListener('click', p_select);
 var p5 = document.getElementById('perso5');
 p5.addEventListener('click', p_select);
 var p6 = document.getElementById('perso6');
-p6.addEventListener('click', p_select);
+p6.addEventListener('click', p_select);*/
