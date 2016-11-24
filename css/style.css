@@ -159,11 +159,11 @@ p {
     margin-left: -2.5%;
 }
 
-#selectstage #Stage1{
+#select_stage #Stage1{
     width: 150px;
     height: 150px;
-    background: url('../images/selectstages/stage1.jpg');
-    background-repeat: no-repeat;
+    background: url('../images/selectstages/stage1.jpg') no-repeat;
+    background-size: 100% 100%;
     position: absolute;
     top: 35%;
     left: 73.75%;
