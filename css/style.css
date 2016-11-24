@@ -37,41 +37,54 @@ p {
     background-size: 100% 100%;
     position: absolute;
     top: 30%;
-    left: 38%;
+    left: 37%;
 }
 
 #menu #start{
     display: none;
-    width: 100px;
+    width: 214px;
     height: 50px;
-    top: 40%;
-    left: 45%;
+    top: 41%;
+    left: 42%;
     position: absolute;
     text-align: center;
 }
 
-#start p{
+#menu #start p{
     font-weight: bold;
     font-size: 50px;
     color: yellow;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+
+#menu #start p:hover{
+    -webkit-transform: scale(1.2);
 }
 
 #menu #exit{
     display: none;
-    width: 100px;
+    width: 146px;
     height: 50px;
     position: absolute;
-    top: 50%;
-    left: 46.5%;
+    top: 53%;
+    left: 44.7%;;
     text-align: center;
 }
 
-#exit p{
+#menu #exit p{
     font-weight: bold;
     font-size: 50px;
     color: yellow;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
 }
 
+#menu #exit p:hover{
+    -webkit-transform: scale(1.2);
+}
 #select_player{
     display: none;
     width: 100%;
@@ -97,7 +110,11 @@ p {
     background-repeat: no-repeat;
     position: absolute;
     top: 35%;
-    left: 16.5%;
+    left: 16.5%; 
+}
+
+#select_player #Ryu:hover{
+    -webkit-transform: scale(1.1);
 }
 
 #select_player #ChunLi{
@@ -110,6 +127,11 @@ p {
     left: 25.5%;
 }
 
+#select_player #Chunli:hover{
+    -webkit-transform: scale(1.1);
+}
+
+
 #select_player #Ken{
     width: 150px;
     height: 150px;
@@ -119,6 +141,11 @@ p {
     top: 35%;
     left: 34.75%;
 }
+
+#select_player #Ken:hover{
+    -webkit-transform: scale(1.1);
+}
+
 
 #select_player #Guile{
     width: 150px;
@@ -130,6 +157,11 @@ p {
     left: 56.5%;
 }
 
+#select_player #Guile:hover{
+    -webkit-transform: scale(1.1);
+}
+
+
 #select_player #Akuma{
     width: 150px;
     height: 150px;
@@ -140,6 +172,11 @@ p {
     left: 65.5%;
 }
 
+#select_player #Akuma:hover{
+    -webkit-transform: scale(1.1);
+}
+
+
 #select_player #DeeJay{
     width: 150px;
     height: 150px;
@@ -149,6 +186,11 @@ p {
     top: 35%;
     left: 73.75%;
 }
+
+#select_player #DeeJay:hover{
+    -webkit-transform: scale(1.1);
+}
+
 
 
 #select_stage{
@@ -179,6 +221,11 @@ p {
     left: 2.75%;
 }
 
+#select_stage #Stage1:hover{
+    -webkit-transform: scale(1.2);
+}
+
+
 #select_stage #Stage2{
     width: 338px;
     height: 194px;
@@ -187,6 +234,10 @@ p {
     position: absolute;
     top: 21%;
     left: 36.75%;
+}
+
+#select_stage #Stage2:hover{
+    -webkit-transform: scale(1.2);
 }
 
 #select_stage #Stage3{
@@ -199,6 +250,10 @@ p {
     left: 70.75%;
 }
 
+#select_stage #Stage3:hover{
+    -webkit-transform: scale(1.2);
+}
+
 #select_stage #Stage4{
     width: 338px;
     height: 194px;
@@ -207,6 +262,10 @@ p {
     position: absolute;
     top: 59%;
     left: 2.75%;
+}
+
+#select_stage #Stage4:hover{
+    -webkit-transform: scale(1.2);
 }
 
 #select_stage #Stage5{
@@ -219,6 +278,9 @@ p {
     left: 36.75%;
 }
 
+#select_stage #Stage5:hover{
+    -webkit-transform: scale(1.2);
+}
 #select_stage #Stage6{
     width: 338px;
     height: 194px;
@@ -229,7 +291,11 @@ p {
     left: 70.75%;
 }
 
-#figh{
+#select_stage #Stage6:hover{
+    -webkit-transform: scale(1.2);
+}
+
+#fight{
     display: none;
     width: 100%;
     height: 662px;
