@@ -36,7 +36,7 @@ function show_select_player(){
 var s = document.getElementById("start");
 s.addEventListener('click', show_select_player);
 
-function p_select(nb_perso){
+/*function p_select(nb_perso){
     mp = document.getElementById('message_player');
     if (mp.textContent == "Player 1 select your perso"){
         pl1 = nb_perso;
@@ -95,4 +95,49 @@ function p6_select(){
     p_select(nb_perso);
 }
 var p6 = document.getElementById('DeeJay');
-p6.addEventListener('click', p6_select);
+p6.addEventListener('click', p6_select);*/
+
+function get_off_top( el ) {
+    var _y = 0;
+    while( el && !isNaN( el.offsetTop ) ) {
+        _y += el.offsetTop - el.scrollTop;
+        el = el.offsetParent;
+    }
+    return (_y);
+} 
+
+function get_off_left( el ) {
+    var _x = 0;
+    while( el && !isNaN( el.offsetLeft ) ) {
+        _x += el.offsetLeft - el.scrollLeft;
+        el = el.offsetParent;
+    }
+    return (_x);
+}
+
+function down(){
+    var _s = document.getElementById("selection");
+    var _s_top = get_off_top(document.getElementById("selection"));
+    console.log(_s_top);
+    if (_s_top == 232)
+        _s.style.top = "58%";
+}
+
+function right(){
+    var _s = document.getElementById("selection");
+    var _s_left = get_off_left(document.getElementById("selection"));
+    console.log(_s_left);
+    if (_s_left == 223)
+        _s.style.left = "25.5%";
+}
+
+function move_selector(e){
+    console.log(e.keyCode);
+    if (e.keyCode == 40)
+        down();
+    else if (e.keyCode == 39)
+        right();
+}
+
+var sp = document.getElementById("select_player");
+addEventListener('keydown', move_selector);
