@@ -1,3 +1,13 @@
+/*============================================================
+#title            : Exercise 5: STREET FIGHTER VI
+#description      : Game created with passion with HTML/CSS/JAVASCRIPT
+#author           : CAILLOT Brieuc & SAUMUROT Florian
+#date             : 20161124
+#version          : Constantly on progress
+#usage            : JAVASCRIPT
+#notes            : Only working on search engine
+=============================================================*/
+
 var pl1 = 0,
     pl2 = 0,
     stage;
