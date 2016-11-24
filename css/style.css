@@ -103,6 +103,17 @@ p {
     margin-left: -2.5%;
 }
 
+#select_player #selection{
+    width: 115px;
+    height: 140px;
+    position: absolute;
+    top: 35%;
+    left: 16.5%;
+    border: yellow solid 5px;
+    z-index: 10;
+    
+}
+
 #select_player #Ryu{
     width: 150px;
     height: 150px;
