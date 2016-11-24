@@ -159,6 +159,56 @@ p {
     margin-left: -2.5%;
 }
 
+#selectstage #Stage1{
+    width: 150px;
+    height: 150px;
+    background: url('../images/selectstages/stage1.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 73.75%;
+}
+
+#selectstage #Stage2{
+    width: 150px;
+    height: 150px;
+    background: url('../images/selectstages/stage2.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 73.75%;
+}
+
+#selectstage #Stage3{
+    width: 150px;
+    height: 150px;
+    background: url('../images/selectstages/stage3.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 73.75%;
+}
+
+#selectstage #Stage4{
+    width: 150px;
+    height: 150px;
+    background: url('../images/selectstages/stage4.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 73.75%;
+}
+
+#selectstage #Stage5{
+    width: 150px;
+    height: 150px;
+    background: url('../images/selectstages/stage5.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35%;
+    left: 73.75%;
+}
+
 #figh{
     display: none;
     width: 100%;
