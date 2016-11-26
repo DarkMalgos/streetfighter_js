@@ -46,67 +46,6 @@ function show_select_player(){
 var s = document.getElementById("start");
 s.addEventListener('click', show_select_player);
 
-/*function p_select(nb_perso){
-    mp = document.getElementById('message_player');
-    if (mp.textContent == "Player 1 select your perso"){
-        pl1 = nb_perso;
-        mp.textContent = "Player 2 select your perso";
-    }else{
-        pl2 = nb_perso;
-        var sp = document.getElementById('select_player');
-        sp.style.display = 'none';
-        var ss = document.getElementById('select_stage');
-        ss.style.display = 'block';
-    }
-    console.log(pl1 + ' ' + pl2);
-}
-
-function p1_select(){
-    var nb_perso = 1;
-    p_select(nb_perso);
-}
-
-var p1 = document.getElementById("Ryu");
-p1.addEventListener('click', p1_select);
-
-function p2_select(){
-    var nb_perso = 2;
-    p_select(nb_perso);
-}
-
-var p2 = document.getElementById("ChunLi");
-p2.addEventListener('click', p2_select);
-
-function p3_select(){
-    var nb_perso = 3;
-    p_select(nb_perso);
-}
-
-var p3 = document.getElementById('Ken');
-p3.addEventListener('click', p3_select);
-
-function p4_select(){
-    var nb_perso = 4;
-    p_select(nb_perso);
-}
-
-var p4 = document.getElementById('Guile');
-p4.addEventListener('click', p4_select);
-
-function p5_select(){
-    var nb_perso = 5;
-    p_select(nb_perso);
-}
-var p5 = document.getElementById('Akuma');
-p5.addEventListener('click', p5_select);
-
-function p6_select(){
-    var nb_perso = 6;
-    p_select(nb_perso);
-}
-var p6 = document.getElementById('DeeJay');
-p6.addEventListener('click', p6_select);*/
-
 function get_off_top( el ) {
     var _y = 0;
     while( el && !isNaN( el.offsetTop ) ) {
@@ -125,28 +64,83 @@ function get_off_left( el ) {
     return (_x);
 }
 
-function down(){
+/*function down(){
     var _s = document.getElementById("selection");
     var _s_top = get_off_top(document.getElementById("selection"));
     console.log(_s_top);
     if (_s_top == 232)
         _s.style.top = "58%";
-}
+}*/
 
 function right(){
     var _s = document.getElementById("selection");
     var _s_left = get_off_left(document.getElementById("selection"));
     console.log(_s_left);
-    if (_s_left == 223)
-        _s.style.left = "25.5%";
+    if (_s_left < 471)
+        _s.style.left = _s_left + 123 + "px";
+    else if (_s_left == 471)
+        _s.style.left = _s_left + 300 + "px";
+    else if (_s_left < 1011)
+        _s.style.left = _s_left + 120 + "px";
+}
+
+function left(){
+    var _s = document.getElementById("selection");
+    var _s_left = get_off_left(document.getElementById("selection"));
+    console.log(_s_left);
+    if (_s_left > 771)
+        _s.style.left = _s_left - 120 + "px";
+    else if (_s_left == 771)
+        _s.style.left = _s_left - 300 + "px";
+    else if (_s_left > 225)
+        _s.style.left = _s_left - 123 + "px";
+}
+
+function p_select(nb_perso){
+    mp = document.getElementById('message_player');
+    if (mp.textContent == "Player 1 select your perso"){
+        pl1 = nb_perso;
+        mp.textContent = "Player 2 select your perso";
+    }else{
+        pl2 = nb_perso;
+        var sp = document.getElementById('select_player');
+        sp.style.display = 'none';
+        var ss = document.getElementById('select_stage');
+        ss.style.display = 'block';
+    }
+    console.log(pl1 + ' ' + pl2);
+}
+
+function enter(){
+    var _s = document.getElementById("selection");
+    var _s_left = get_off_left(document.getElementById("selection"));
+    console.log(_s_left);
+    if (_s_left == 225)
+        p_select(1);
+    else if (_s_left == 348)
+        p_select(2);
+    else if (_s_left == 471)
+        p_select(3);
+    else if (_s_left == 771)
+        p_select(4);
+    else if (_s_left == 891)
+        p_select(5);
+    else if (_s_left == 1011)
+        p_select(6);
 }
 
 function move_selector(e){
     console.log(e.keyCode);
-    if (e.keyCode == 40)
-        down();
-    else if (e.keyCode == 39)
+    /*if (e.keyCode == 40)
+        down();*/
+    if (e.keyCode == 39)
         right();
+    else if (e.keyCode == 38)
+        up();
+    else if (e.keyCode == 37)
+        left();
+    else if (e.keyCode == 13)
+        enter();
 }
 
 var sp = document.getElementById("select_player");
