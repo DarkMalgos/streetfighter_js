@@ -47,7 +47,7 @@ ul li{
     display: inline-block;
     padding-right: 30px;
     font-size: 30px;
-    margin: 373px -28px 0px 76px;
+    margin: 275px -28px 0px 76px;
 
 }
 
@@ -125,10 +125,12 @@ ul li{
 }
 
 #select_player .fleche{
-    background: url('images/Sources/fleche.png') no-repeat;
+    background: url('../images/Sources/fleche.png') no-repeat;
     background-size: 100% 100%;
-    width: 100px;
-    height: 50px;
+    width: 146px;
+    height: 71px;
+    margin-top: -29px;
+
 }
 
 #select_player #message_player{
@@ -215,6 +217,15 @@ ul li{
     list-style: none;
     color: white;
     font-size: 30px;
+}
+
+#select_stage .fleche{
+    background: url('../images/Sources/fleche.png') no-repeat;
+    background-size: 100% 100%;
+    width: 127px;
+    height: 71px;
+    margin-top: -29px;
+
 }
 
 #select_stage #ul1{
