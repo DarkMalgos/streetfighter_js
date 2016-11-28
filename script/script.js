@@ -101,7 +101,7 @@ function enter(){
 
 function move_selector(e){
     console.log(e.keyCode);
-    /*if (e.keyCode == 40)
+    /*if (e.keyCode == 40) 
         down();*/
     if (e.keyCode == 39)
         right();
