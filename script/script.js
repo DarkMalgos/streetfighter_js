@@ -80,7 +80,24 @@ function left(){
     }
     
     
-}  
+}
+
+function enter(){
+    var _class_selection = document.getElementsByClassName("selection")[0],
+    _id_perso_next = parseInt(_class_selection.getAttribute('id').charAt(1)),
+        _message_player = document.getElementById('message_player'),
+        _sp = document.getElementById("select_player"),
+        _ss = document.getElementById("select_stage");
+    
+    if (_message_player.innerHTML == "Player 1 select your perso"){
+        pl1 = _id_perso_next;
+        _message_player.innerHTML = "Player 2 select your perso";
+    } else {
+        pl2 = _id_perso_next;
+        _sp.style.display = "none";
+        _ss.style.display = "block";
+    }
+}
 
 function move_selector(e){
     console.log(e.keyCode);
