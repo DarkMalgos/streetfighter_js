@@ -135,12 +135,12 @@ ul li{
 
 #select_player #message_player{
     width: 100%;
-    height: 30px;
+    height: 42px;
     color: yellow;
     font-weight: bold;
     text-align: center;
     font-size: 65px;
-    left: 50%;
+    left: 54%;
     
 }
 
@@ -222,7 +222,7 @@ ul li{
 #select_stage .fleche{
     background: url('../images/Sources/fleche.png') no-repeat;
     background-size: 100% 100%;
-    width: 127px;
+    width: 146px;
     height: 71px;
     margin-top: -29px;
 
@@ -264,7 +264,7 @@ ul li{
 
 #select_stage #message_stage{
     width: 100%;
-    height: 9%;
+    height: 5%;
     color: yellow;
     font-weight: bold;
     text-align: center;
