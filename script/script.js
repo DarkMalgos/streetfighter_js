@@ -50,11 +50,12 @@ s.addEventListener('click', show_select_player);
 
 function player_right()
 {
+    console.log("false1");
     var _class_selection = document.getElementsByClassName("selection")[0],
         _id = _class_selection.getAttribute('id'),
         _id_perso = document.getElementById(_id);
     _id_perso_next = parseInt(_class_selection.getAttribute('id').charAt(1)) + 1;
-    console.log(_id_perso);
+    console.log(_id);
     if (_id_perso_next <= 6){
         var _perso_next = document.getElementById('p' + _id_perso_next);
         _id_perso.classList.remove("selection");
@@ -175,33 +176,6 @@ function stage_left(){
     }
 }
 
-function move_selector1(e){
-    if (lock == false){
-        console.log("false" + e.keyCode);
-        /*if (e.keyCode == 40)
-            down();*/
-        if (e.keyCode == 39)
-            player_right();
-        /*else if (e.keyCode == 38)
-            up();*/
-        else if (e.keyCode == 37)
-            player_left();
-        else if (e.keyCode == 13)
-            player_enter();
-    } else {
-        console.log("true" + e.keyCode);
-        if (e.keyCode == 40)
-            stage_down();
-        else if (e.keyCode == 38)
-            stage_up();
-        else if (e.keyCode == 39)
-            stage_right();
-        else if (e.keyCode == 37)
-            stage_left();
-
-    }
-}
-
 function stage_enter(){
     var _class_selection = document.getElementsByClassName("selection")[1],
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)),
@@ -210,7 +184,8 @@ function stage_enter(){
     
     stage = _id_stage_next;
     _ss.style.display = "none";
-    _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ") no-repeat";
+    _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".jpg) no-repeat";
+    _f.style.backgroundSize = "100% 100%";
     _f.style.display = "block";
     
 }
@@ -218,6 +193,7 @@ function stage_enter(){
 function move_selector(e){
     console.log(e.keyCode);
     if (lock == false){
+        console.log("false");
         /*if (e.keyCode == 40) 
             down();*/
         if (e.keyCode == 39)
@@ -241,8 +217,7 @@ function move_selector(e){
             stage_enter();
     }
 }
-
-    addEventListener('keydown', move_selector);
+addEventListener('keydown', move_selector);
     
     
     
