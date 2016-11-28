@@ -114,6 +114,23 @@ p {
     z-index: 5;
 }
 
+.names1{
+    color: whitesmoke;
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 30px;
+    margin: 373px -28px 0px 76px;
+
+}
+
+.names2{
+    color: whitesmoke;
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 30px;
+    margin: 354px -214px 0px 260px;
+}
+
 #select_player #p1{
     width: 150px;
     height: 150px;
