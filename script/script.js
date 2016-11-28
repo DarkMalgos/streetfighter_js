@@ -11,6 +11,7 @@
 var pl1 = 0,
     pl2 = 0,
     stage;
+    lock = false;
 
 console.log(document.getElementById('logo').offsetTop);
 function show_menu(){
@@ -47,7 +48,7 @@ function show_select_player(){
 var s = document.getElementById("start");
 s.addEventListener('click', show_select_player);
 
-function right()
+function player_right()
 {
     var _class_selection = document.getElementsByClassName("selection")[0],
         _id = _class_selection.getAttribute('id'),
@@ -60,12 +61,10 @@ function right()
         _id_perso.classList.add("noselection");
         _perso_next.classList.remove("noselection");
         _perso_next.classList.add("selection");
-    }
-    
-    
+    } 
 }
 
-function left(){
+function player_left(){
       var _class_selection = document.getElementsByClassName("selection")[0],
         _id = _class_selection.getAttribute('id'),
         _id_perso = document.getElementById(_id);
@@ -82,7 +81,7 @@ function left(){
     
 }
 
-function enter(){
+function player_enter(){
     var _class_selection = document.getElementsByClassName("selection")[0],
     _id_perso_next = parseInt(_class_selection.getAttribute('id').charAt(1)),
         _message_player = document.getElementById('message_player'),
@@ -96,21 +95,111 @@ function enter(){
         pl2 = _id_perso_next;
         _sp.style.display = "none";
         _ss.style.display = "block";
+        lock = true;
     }
 }
 
-function move_selector(e){
-    console.log(e.keyCode);
-    /*if (e.keyCode == 40)
-        down();*/
-    if (e.keyCode == 39)
-        right();
-    /*else if (e.keyCode == 38)
-        up();*/
-    else if (e.keyCode == 37)
-        left();
-    else if (e.keyCode == 13)
-        enter();
+function stage_down(){
+        var _class_selection = document.getElementsByClassName("selection")[1],
+        _id = _class_selection.getAttribute('id'),
+        _id_stage = document.getElementById(_id);
+    _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) + 3;
+    console.log(_id_stage_next);
+    if (_id_stage_next <= 6){
+        var _stage_next = document.getElementById('Stage' + _id_stage_next);
+        _id_stage.classList.remove("selection");
+        _id_stage.classList.add("noselection");
+        _stage_next.classList.remove("noselection");
+        _stage_next.classList.add("selection");
+    }
 }
 
-addEventListener('keydown', move_selector);
+function stage_up(){
+        var _class_selection = document.getElementsByClassName("selection")[1],
+        _id = _class_selection.getAttribute('id'),
+        _id_stage = document.getElementById(_id);
+    _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) - 3;
+    console.log(_id_stage_next);
+    if (_id_stage_next >= 1){
+        var _stage_next = document.getElementById('Stage' + _id_stage_next);
+        _id_stage.classList.remove("selection");
+        _id_stage.classList.add("noselection");
+        _stage_next.classList.remove("noselection");
+        _stage_next.classList.add("selection");
+    }
+}
+
+function stage_right(){
+        var _class_selection = document.getElementsByClassName("selection")[1],
+        _id = _class_selection.getAttribute('id'),
+        _id_stage = document.getElementById(_id);
+    _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) + 1;
+    console.log(_id_stage_next);
+    if (_id_stage_next <= 3){
+        var _stage_next = document.getElementById('Stage' + _id_stage_next);
+        _id_stage.classList.remove("selection");
+        _id_stage.classList.add("noselection");
+        _stage_next.classList.remove("noselection");
+        _stage_next.classList.add("selection");
+    }
+    
+    else if (_id_stage_next > 4 && _id_stage_next <= 6){
+        var _stage_next = document.getElementById('Stage' + _id_stage_next);
+        _id_stage.classList.remove("selection");
+        _id_stage.classList.add("noselection");
+        _stage_next.classList.remove("noselection");
+        _stage_next.classList.add("selection");
+    }
+}
+
+function stage_left(){
+        var _class_selection = document.getElementsByClassName("selection")[1],
+        _id = _class_selection.getAttribute('id'),
+        _id_stage = document.getElementById(_id);
+    _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) - 1;
+    console.log(_id_stage_next);
+    if (_id_stage_next >= 4){
+        var _stage_next = document.getElementById('Stage' + _id_stage_next);
+        _id_stage.classList.remove("selection");
+        _id_stage.classList.add("noselection");
+        _stage_next.classList.remove("noselection");
+        _stage_next.classList.add("selection");
+    }
+    
+    else if (_id_stage_next >= 1 && _id_stage_next < 3){
+        var _stage_next = document.getElementById('Stage' + _id_stage_next);
+        _id_stage.classList.remove("selection");
+        _id_stage.classList.add("noselection");
+        _stage_next.classList.remove("noselection");
+        _stage_next.classList.add("selection");
+    }
+}
+
+function move_selector1(e){
+    if (lock == false){
+        console.log("false" + e.keyCode);
+        /*if (e.keyCode == 40)
+            down();*/
+        if (e.keyCode == 39)
+            player_right();
+        /*else if (e.keyCode == 38)
+            up();*/
+        else if (e.keyCode == 37)
+            player_left();
+        else if (e.keyCode == 13)
+            player_enter();
+    } else {
+        console.log("true" + e.keyCode);
+        if (e.keyCode == 40)
+            stage_down();
+        else if (e.keyCode == 38)
+            stage_up();
+        else if (e.keyCode == 39)
+            stage_right();
+        else if (e.keyCode == 37)
+            stage_left();
+
+    }
+}
+
+addEventListener('keydown', move_selector1);
