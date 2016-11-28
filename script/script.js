@@ -102,7 +102,7 @@ function player_enter(){
 function stage_down(){
         var _class_selection = document.getElementsByClassName("selection")[1],
         _id = _class_selection.getAttribute('id'),
-        _id_stage = document.getElementById(_id);
+        _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) + 3;
     console.log(_id_stage_next);
     if (_id_stage_next <= 6){
@@ -117,7 +117,7 @@ function stage_down(){
 function stage_up(){
         var _class_selection = document.getElementsByClassName("selection")[1],
         _id = _class_selection.getAttribute('id'),
-        _id_stage = document.getElementById(_id);
+        _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) - 3;
     console.log(_id_stage_next);
     if (_id_stage_next >= 1){
@@ -132,7 +132,7 @@ function stage_up(){
 function stage_right(){
         var _class_selection = document.getElementsByClassName("selection")[1],
         _id = _class_selection.getAttribute('id'),
-        _id_stage = document.getElementById(_id);
+        _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) + 1;
     console.log(_id_stage_next);
     if (_id_stage_next <= 3){
@@ -155,7 +155,7 @@ function stage_right(){
 function stage_left(){
         var _class_selection = document.getElementsByClassName("selection")[1],
         _id = _class_selection.getAttribute('id'),
-        _id_stage = document.getElementById(_id);
+        _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) - 1;
     console.log(_id_stage_next);
     if (_id_stage_next >= 4){
@@ -200,7 +200,21 @@ function move_selector1(e){
             stage_left();
 
     }
+}
+
+function stage_enter(){
+    var _class_selection = document.getElementsByClassName("selection")[1],
+    _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)),
+    _ss = document.getElementById("select_stage"),
+    _f = document.getElementById("fight");
     
+    stage = _id_stage_next;
+    _ss.style.display = "none";
+    _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ") no-repeat";
+    _f.style.display = "block";
+    
+}
+
 function move_selector(e){
     console.log(e.keyCode);
     if (lock == false){
@@ -223,9 +237,12 @@ function move_selector(e){
             stage_up();
         else if (e.keyCode == 37)
             stage_left();
-        /*else if (e.keyCode == 13)
-            stage_enter();*/
+        else if (e.keyCode == 13)
+            stage_enter();
     }
 }
 
-addEventListener('keydown', move_selector1);
+    addEventListener('keydown', move_selector);
+    
+    
+    
