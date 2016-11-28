@@ -121,7 +121,7 @@ function enter(){
         p_select(2);
     else if (_s_left == 471)
         p_select(3);
-    else if (_s_left == 771)
+    else if (_s_left ==& 771)
         p_select(4);
     else if (_s_left == 891)
         p_select(5);
