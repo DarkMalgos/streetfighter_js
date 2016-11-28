@@ -364,3 +364,23 @@ ul li{
     background-size: 100% 100%;
     position: relative;
 }
+
+.left-1{
+    width: 200px;
+    height: 365px;
+    background: url("../images/sprites/p1/ryuleft.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.right-1{
+    width: 200px;
+    height: 365px;
+    background: url("../images/sprites/p1/ryuright.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 40%;
+    left: 75%;
+}

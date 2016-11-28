@@ -50,7 +50,6 @@ s.addEventListener('click', show_select_player);
 
 function player_right()
 {
-    console.log("false1");
     var _class_selection = document.getElementsByClassName("selection")[0],
         _id = _class_selection.getAttribute('id'),
         _id_perso = document.getElementById(_id);
@@ -180,14 +179,17 @@ function stage_enter(){
     var _class_selection = document.getElementsByClassName("selection")[1],
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)),
     _ss = document.getElementById("select_stage"),
-    _f = document.getElementById("fight");
+    _f = document.getElementById("fight"),
+    _p1 = document.getElementById("pl1"),
+    _p2 = document.getElementById("pl2");
     
     stage = _id_stage_next;
     _ss.style.display = "none";
     _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".jpg) no-repeat";
     _f.style.backgroundSize = "100% 100%";
     _f.style.display = "block";
-    
+    _p1.classList.add("left-" + pl1);
+    _p2.classList.add("right-" + pl2);
 }
 
 function move_selector(e){
