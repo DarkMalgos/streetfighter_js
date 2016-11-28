@@ -22,10 +22,41 @@ p {
     font-family: FontSF;
 }
 
+ul li{
+    font-family: FontSF;
+}
+
 .wrapper{
     width: 1200px;
     height: 662px;
     margin: 0 auto;
+}
+
+.selection{
+    border: yellow solid 7px; 
+    z-index: 10;
+}
+
+.noselection{
+    border: solid 7px;
+    z-index: 5;
+}
+
+.names1{
+    color: whitesmoke;
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 30px;
+    margin: 373px -28px 0px 76px;
+
+}
+
+.names2{
+    color: whitesmoke;
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 30px;
+    margin: 354px -214px 0px 260px;
 }
 
 #menu{
@@ -104,33 +135,6 @@ p {
     
 }
 
-.selection{
-    border: yellow solid 7px; 
-    z-index: 10;
-}
-
-.noselection{
-    border: solid 7px;
-    z-index: 5;
-}
-
-.names1{
-    color: whitesmoke;
-    display: inline-block;
-    padding-right: 30px;
-    font-size: 30px;
-    margin: 373px -28px 0px 76px;
-
-}
-
-.names2{
-    color: whitesmoke;
-    display: inline-block;
-    padding-right: 30px;
-    font-size: 30px;
-    margin: 354px -214px 0px 260px;
-}
-
 #select_player #p1{
     width: 150px;
     height: 150px;
@@ -199,9 +203,50 @@ p {
     width: 100%;
 }
 
+#select_stage ul li{
+    display: inline-block;
+    list-style: none;
+    color: white;
+    font-size: 30px;
+}
+
+#select_stage #ul1{
+    left: 581px;
+    top: 79px;
+    position: absolute;
+    margin: 6px -7px;
+}
+
+#select_stage #ul1 li:first-child{
+    position: absolute;
+    margin: 1px -420px;
+}
+
+#select_stage #ul1 li:last-child{
+    margin: -33px 0px 0px 331px;
+    width: 124px;
+}
+
+
+#select_stage #ul2{
+    position: absolute;
+    top: 369px;
+    left: 581px;
+}
+
+#select_stage #ul2 li:first-child{
+    position: absolute;
+    margin: 1px -420px;
+}
+
+#select_stage #ul2 li:last-child{
+    margin: -33px 0px 0px 331px;
+    width: 150px;
+}
+
 #select_stage #message_stage{
     width: 100%;
-    height: 30%;
+    height: 9%;
     color: yellow;
     font-weight: bold;
     text-align: center;
@@ -258,7 +303,7 @@ p {
     background: url('../images/selectstages/stage4.jpg') no-repeat;
     background-size: 100% 100%;
     position: absolute;
-    top: 59%;
+    top: 64%;
     left: 2.75%;
 }
 
@@ -272,7 +317,7 @@ p {
     background: url('../images/selectstages/stage5.jpg') no-repeat;
     background-size: 100% 100%;
     position: absolute;
-    top: 59%;
+    top: 65%;
     left: 36.75%;
 }
 
@@ -285,7 +330,7 @@ p {
     background: url('../images/selectstages/stage6.jpg') no-repeat;
     background-size: 100% 100%;
     position: absolute;
-    top: 59%;
+    top: 65%;
     left: 70.75%;
 }
 

@@ -200,6 +200,32 @@ function move_selector1(e){
             stage_left();
 
     }
+    
+function move_selector(e){
+    console.log(e.keyCode);
+    if (lock == false){
+        /*if (e.keyCode == 40) 
+            down();*/
+        if (e.keyCode == 39)
+            player_right();
+        /*else if (e.keyCode == 38)
+            up();*/
+        else if (e.keyCode == 37)
+            player_left();
+        else if (e.keyCode == 13)
+            player_enter();
+    } else {
+         if (e.keyCode == 40) 
+            stage_down();
+        if (e.keyCode == 39)
+            stage_right();
+        else if (e.keyCode == 38)
+            stage_up();
+        else if (e.keyCode == 37)
+            stage_left();
+        /*else if (e.keyCode == 13)
+            stage_enter();*/
+    }
 }
 
 addEventListener('keydown', move_selector1);
