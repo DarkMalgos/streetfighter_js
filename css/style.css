@@ -60,9 +60,6 @@ p {
     font-weight: bold;
     font-size: 50px;
     color: yellow;
-    border-style: solid;
-    border-color: black;
-    border-radius: 20px;
 }
 
 #menu #start p:hover{
@@ -83,9 +80,6 @@ p {
     font-weight: bold;
     font-size: 50px;
     color: yellow;
-    border-style: solid;
-    border-color: black;
-    border-radius: 20px;
 }
 
 #menu #exit p:hover{
@@ -106,109 +100,73 @@ p {
     font-weight: bold;
     text-align: center;
     font-size: 65px;
-    margin-left: -2.5%;
-}
-
-#select_player #selection{
-    width: 115px;
-    height: 140px;
-    position: absolute;
-    top: 35%;
-    left: 16.5%;
-    border: yellow solid 5px;
-    z-index: 10;
+    left: 50%;
     
 }
 
-#select_player #Ryu{
+.selection{
+    border: yellow solid 2px; 
+}
+
+#select_player #p1{
     width: 150px;
     height: 150px;
-    background: url('../images/selectfaces/Ryu_face.png');
-    background-repeat: no-repeat;
+    background: url('../images/selectfaces/Ryu_face.png') no-repeat center;
     position: absolute;
-    top: 35%;
-    left: 225px; 
+    top: 50%;
+    left: 50%; 
+    -webkit-transform: translate(-348%, -70%);
 }
 
-#select_player #Ryu:hover{
-    -webkit-transform: scale(1.1);
-}
-
-#select_player #ChunLi{
+#select_player #p2{
     width: 150px;
     height: 150px;
-    background: url('../images/selectfaces/ChunLi_face.png');
-    background-repeat: no-repeat;
+    background: url('../images/selectfaces/ChunLi_face.png') no-repeat center;
     position: absolute;
-    top: 232px;
-    left: 348px;
+    top: 50%;
+    left: 50%; 
+    -webkit-transform: translate(-249%, -70%);
 }
 
-#select_player #Chunli:hover{
-    -webkit-transform: scale(1.1);
-}
-
-
-#select_player #Ken{
+#select_player #p3{
     width: 150px;
     height: 150px;
-    background: url('../images/selectfaces/Ken_face.png');
-    background-repeat: no-repeat;
+    background: url('../images/selectfaces/Ken_face.png') no-repeat center;
     position: absolute;
-    top: 232px;
-    left: 471px;
+    top: 50%;
+    left: 50%; 
+    -webkit-transform: translate(-150%, -70%);
 }
 
-#select_player #Ken:hover{
-    -webkit-transform: scale(1.1);
-}
-
-
-#select_player #Guile{
+#select_player #p4{
     width: 150px;
     height: 150px;
-    background: url('../images/selectfaces/Guile_face.png');
-    background-repeat: no-repeat;
+    background: url('../images/selectfaces/Guile_face.png') no-repeat center;
     position: absolute;
-    top: 232px;
-    left: 771px;
+    top: 50%;
+    left: 50%; 
+    -webkit-transform: translate(52%, -70%);
 }
 
-#select_player #Guile:hover{
-    -webkit-transform: scale(1.1);
-}
-
-
-#select_player #Akuma{
+#select_player #p5{
     width: 150px;
     height: 150px;
-    background: url('../images/selectfaces/Akuma_face.png');
-    background-repeat: no-repeat;
+    background: url('../images/selectfaces/Akuma_face.png') no-repeat center;
     position: absolute;
-    top: 232px;
-    left: 891px;
+    top: 50%;
+    left: 50%; 
+    -webkit-transform: translate(151%, -70%);
 }
 
-#select_player #Akuma:hover{
-    -webkit-transform: scale(1.1);
-}
-
-
-#select_player #DeeJay{
+#select_player #p6{
     width: 150px;
     height: 150px;
-    background: url('../images/selectfaces/DeeJay_face.png');
-    background-repeat: no-repeat;
+    background: url('../images/selectfaces/DeeJay_face.png') no-repeat center;
     position: absolute;
-    top: 232px;
-    left: 1011px;
+    top: 50%;
+    left: 50%; 
+    -webkit-transform: translate(250%, -70%);
 }
-
-#select_player #DeeJay:hover{
-    -webkit-transform: scale(1.1);
-}
-
-
 
 #select_stage{
     height: 662px;
@@ -225,7 +183,7 @@ p {
     font-weight: bold;
     text-align: center;
     font-size: 65px;
-    margin-left: -2.5%;
+    left: 50%;
 }
 
 #select_stage #Stage1{
