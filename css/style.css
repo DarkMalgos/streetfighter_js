@@ -374,13 +374,23 @@ ul li{
     -webkit-transform: translate(-50%, -50%);
 }
 
+.Timer{
+    width: 37%;
+    height: 52%;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    background: url('../images/Sources/3.png') no-repeat center;
+}
+
 .left-1{
     width: 500px;
     height: 301px;
     background: url("../images/sprites/p1/left/stend-2.png");
     background-size: 100% 100%;
     position: absolute;
-    top: 50%;
+    top: 31%;
     left: 2%;
     -webkit-animation :
         ryu-stend-left 2s alternate infinite;
@@ -402,7 +412,7 @@ ul li{
     background: url("../images/sprites/p1/right/stend-2.png");
     background-size: 100% 100%;
     position: absolute;
-    top: 50%;
+    top: 31%;
     left: 60%;
     -webkit-animation:
         ryu-stend-right 2s alternate infinite;
