@@ -386,6 +386,16 @@ ul li{
         ryu-stend-left 2s alternate infinite;
 }
 
+.left-1-walkf{
+    -webkit-animation :
+        ryu-walkf-left 2s alternate 1;
+}
+
+.left-1-walkb{
+    -webkit-animation :
+        ryu-walb-left 2s alternate 1;
+}
+
 .right-1{
     width: 500px;
     height: 301px;
@@ -451,6 +461,163 @@ ul li{
     
 }
 
+@-webkit-keyframes ryu-walkf-left{
+    0%{
+        background: url("../images/sprites/p1/left/walk1.png");
+        background-size: 100% 100%;
+    }
+    8.34%{
+        background: url("../images/sprites/p1/left/walk2.png");
+        background-size: 100% 100%;
+    }
+    16.67%{
+        background: url("../images/sprites/p1/left/walk3.png");
+        background-size: 100% 100%;
+    }
+    
+    25.01%{
+        background: url("../images/sprites/p1/left/walk4.png");
+        background-size: 100% 100%;
+    }
+    33.35%{
+        background: url("../images/sprites/p1/left/walk5.png");
+        background-size: 100% 100%;
+    }
+    41.69%{
+        background: url("../images/sprites/p1/left/walk6.png");
+        background-size: 100% 100%;
+    }
+    50.03%{
+        background: url("../images/sprites/p1/left/walk7.png");
+        background-size: 100% 100%;
+    }
+    58.37%{
+        background: url("../images/sprites/p1/left/walk8.png");
+        background-size: 100% 100%;
+    }
+    66.71%{
+        background: url("../images/sprites/p1/left/walk9.png");
+        background-size: 100% 100%;
+    }
+    75.05%{
+        background: url("../images/sprites/p1/left/walk10.png");
+        background-size: 100% 100%;
+    }
+    83.39%{
+        background: url("../images/sprites/p1/left/walk11.png");
+        background-size: 100% 100%;
+    }
+    91.73%{
+        background: url("../images/sprites/p1/left/walk12.png");
+        background-size: 100% 100%;
+    }
+    
+}
+
+@-webkit-keyframes ryu-walkb-left{
+    0%{
+        background: url("../images/sprites/p1/left/walk12.png");
+        background-size: 100% 100%;
+    }
+    8.34%{
+        background: url("../images/sprites/p1/left/walk11.png");
+        background-size: 100% 100%;
+    }
+    16.67%{
+        background: url("../images/sprites/p1/left/walk10.png");
+        background-size: 100% 100%;
+    }
+    
+    25.01%{
+        background: url("../images/sprites/p1/left/walk9.png");
+        background-size: 100% 100%;
+    }
+    33.35%{
+        background: url("../images/sprites/p1/left/walk8.png");
+        background-size: 100% 100%;
+    }
+    41.69%{
+        background: url("../images/sprites/p1/left/walk7.png");
+        background-size: 100% 100%;
+    }
+    50.03%{
+        background: url("../images/sprites/p1/left/walk6.png");
+        background-size: 100% 100%;
+    }
+    58.37%{
+        background: url("../images/sprites/p1/left/walk5.png");
+        background-size: 100% 100%;
+    }
+    66.71%{
+        background: url("../images/sprites/p1/left/walk4.png");
+        background-size: 100% 100%;
+    }
+    75.05%{
+        background: url("../images/sprites/p1/left/walk3.png");
+        background-size: 100% 100%;
+    }
+    83.39%{
+        background: url("../images/sprites/p1/left/walk2.png");
+        background-size: 100% 100%;
+    }
+    91.73%{
+        background: url("../images/sprites/p1/left/walk1.png");
+        background-size: 100% 100%;
+    }
+    
+}
+
+@-webkit-keyframes ryu-stend-right{
+    0%{
+        background: url("../images/sprites/p1/right/stend-2.png");
+        background-size: 100% 100%;
+    }
+    8.34%{
+        background: url("../images/sprites/p1/right/stend-1.png");
+        background-size: 100% 100%;
+    }
+    16.67%{
+        background: url("../images/sprites/p1/right/stend0.png");
+        background-size: 100% 100%;
+    }
+    
+    25.01%{
+        background: url("../images/sprites/p1/right/stend1.png");
+        background-size: 100% 100%;
+    }
+    33.35%{
+        background: url("../images/sprites/p1/right/stend2.png");
+        background-size: 100% 100%;
+    }
+    41.69%{
+        background: url("../images/sprites/p1/right/stend3.png");
+        background-size: 100% 100%;
+    }
+    50.03%{
+        background: url("../images/sprites/p1/right/stend4.png");
+        background-size: 100% 100%;
+    }
+    58.37%{
+        background: url("../images/sprites/p1/right/stend5.png");
+        background-size: 100% 100%;
+    }
+    66.71%{
+        background: url("../images/sprites/p1/right/stend6.png");
+        background-size: 100% 100%;
+    }
+    75.05%{
+        background: url("../images/sprites/p1/right/stend7.png");
+        background-size: 100% 100%;
+    }
+    83.39%{
+        background: url("../images/sprites/p1/right/stend8.png");
+        background-size: 100% 100%;
+    }
+    91.73%{
+        background: url("../images/sprites/p1/right/stend9.png");
+        background-size: 100% 100%;
+    }
+}
 @-webkit-keyframes ryu-stend-right{
     0%{
         background: url("../images/sprites/p1/right/stend-2.png");
