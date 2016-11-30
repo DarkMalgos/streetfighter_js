@@ -219,7 +219,5 @@ function move_selector(e){
             stage_enter();
     }
 }
+
 addEventListener('keydown', move_selector);
-    
-    
-    
