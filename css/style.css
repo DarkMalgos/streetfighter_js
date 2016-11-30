@@ -366,21 +366,130 @@ ul li{
 }
 
 .left-1{
-    width: 200px;
-    height: 365px;
-    background: url("../images/sprites/p1/ryuleft.png");
+    width: 500px;
+    height: 301px;
+    background: url("../images/sprites/p1/left/stend-2.png");
     background-size: 100% 100%;
     position: absolute;
-    top: 40%;
-    left: 10%;
+    top: 50%;
+    left: 8%;
+    -webkit-animation :
+        ryu-stend-left 2s alternate infinite;
 }
 
 .right-1{
-    width: 200px;
-    height: 365px;
-    background: url("../images/sprites/p1/ryuright.png");
+    width: 500px;
+    height: 301px;
+    background: url("../images/sprites/p1/right/stend-2.png");
     background-size: 100% 100%;
     position: absolute;
-    top: 40%;
-    left: 75%;
+    top: 50%;
+    left: 60%;
+    -webkit-animation:
+        ryu-stend-right 2s alternate infinite;
+}
+
+@-webkit-keyframes ryu-stend-left{
+    0%{
+        background: url("../images/sprites/p1/left/stend-2.png");
+        background-size: 100% 100%;
+    }
+    8.34%{
+        background: url("../images/sprites/p1/left/stend-1.png");
+        background-size: 100% 100%;
+    }
+    16.67%{
+        background: url("../images/sprites/p1/left/stend0.png");
+        background-size: 100% 100%;
+    }
+    
+    25.01%{
+        background: url("../images/sprites/p1/left/stend1.png");
+        background-size: 100% 100%;
+    }
+    33.35%{
+        background: url("../images/sprites/p1/left/stend2.png");
+        background-size: 100% 100%;
+    }
+    41.69%{
+        background: url("../images/sprites/p1/left/stend3.png");
+        background-size: 100% 100%;
+    }
+    50.03%{
+        background: url("../images/sprites/p1/left/stend4.png");
+        background-size: 100% 100%;
+    }
+    58.37%{
+        background: url("../images/sprites/p1/left/stend5.png");
+        background-size: 100% 100%;
+    }
+    66.71%{
+        background: url("../images/sprites/p1/left/stend6.png");
+        background-size: 100% 100%;
+    }
+    75.05%{
+        background: url("../images/sprites/p1/left/stend7.png");
+        background-size: 100% 100%;
+    }
+    83.39%{
+        background: url("../images/sprites/p1/left/stend8.png");
+        background-size: 100% 100%;
+    }
+    91.73%{
+        background: url("../images/sprites/p1/left/stend9.png");
+        background-size: 100% 100%;
+    }
+    
+}
+
+@-webkit-keyframes ryu-stend-right{
+    0%{
+        background: url("../images/sprites/p1/right/stend-2.png");
+        background-size: 100% 100%;
+    }
+    8.34%{
+        background: url("../images/sprites/p1/right/stend-1.png");
+        background-size: 100% 100%;
+    }
+    16.67%{
+        background: url("../images/sprites/p1/right/stend0.png");
+        background-size: 100% 100%;
+    }
+    
+    25.01%{
+        background: url("../images/sprites/p1/right/stend1.png");
+        background-size: 100% 100%;
+    }
+    33.35%{
+        background: url("../images/sprites/p1/right/stend2.png");
+        background-size: 100% 100%;
+    }
+    41.69%{
+        background: url("../images/sprites/p1/right/stend3.png");
+        background-size: 100% 100%;
+    }
+    50.03%{
+        background: url("../images/sprites/p1/right/stend4.png");
+        background-size: 100% 100%;
+    }
+    58.37%{
+        background: url("../images/sprites/p1/right/stend5.png");
+        background-size: 100% 100%;
+    }
+    66.71%{
+        background: url("../images/sprites/p1/right/stend6.png");
+        background-size: 100% 100%;
+    }
+    75.05%{
+        background: url("../images/sprites/p1/right/stend7.png");
+        background-size: 100% 100%;
+    }
+    83.39%{
+        background: url("../images/sprites/p1/right/stend8.png");
+        background-size: 100% 100%;
+    }
+    91.73%{
+        background: url("../images/sprites/p1/right/stend9.png");
+        background-size: 100% 100%;
+    }
 }
