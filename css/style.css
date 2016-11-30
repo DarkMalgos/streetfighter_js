@@ -377,7 +377,7 @@ ul li{
 .left-1{
     width: 500px;
     height: 301px;
-    background: url("../images/sprites/p1/stend-2.png");
+    background: url("../images/sprites/p1/left/stend-2.png");
     background-size: 100% 100%;
     position: absolute;
     top: 50%;
@@ -421,7 +421,6 @@ ul li{
         background: url("../images/sprites/p1/left/stend0.png");
         background-size: 100% 100%;
     }
-    
     25.01%{
         background: url("../images/sprites/p1/left/stend1.png");
         background-size: 100% 100%;
