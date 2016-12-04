@@ -374,26 +374,71 @@ ul li{
     -webkit-transform: translate(-50%, -50%);
 }
 
-.left-1{
+#po1 {
     width: 500px;
     height: 301px;
-    background: url("../images/sprites/p1/left/stend-2.png");
-    background-size: 100% 100%;
     position: absolute;
     top: 50%;
     left: 2%;
+}
+
+#po2 {
+    width: 500px;
+    height: 301px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+#po3 {
+    width: 500px;
+    height: 301px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+#po4 {
+    width: 500px;
+    height: 301px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+#po5 {
+    width: 500px;
+    height: 301px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#po6 {
+    width: 500px;
+    height: 301px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
+
+.left-1{
+    background: url("../images/sprites/p1/left/stend-2.png");
+    background-size: 100% 100%;
     -webkit-animation :
         ryu-stend-left 2s alternate infinite;
 }
 
 .left-1-walkf{
     -webkit-animation :
-        ryu-walkf-left 2s alternate 1;
+        ryu-walkf-left 2s alternate 1,
+        ryu-stend-left 2s alternate infinite;
 }
 
 .left-1-walkb{
     -webkit-animation :
-        ryu-walb-left 2s alternate 1;
+        ryu-walb-left 2s alternate 1,
+        ryu-stend-left 2s alternate infinite;
 }
 
 .right-1{
@@ -464,23 +509,28 @@ ul li{
     0%{
         background: url("../images/sprites/p1/left/walk1.png");
         background-size: 100% 100%;
+        left: 2%;
     }
     8.34%{
         background: url("../images/sprites/p1/left/walk2.png");
         background-size: 100% 100%;
+        left: 3%;
     }
     16.67%{
         background: url("../images/sprites/p1/left/walk3.png");
         background-size: 100% 100%;
+        left: 4%;
     }
     
     25.01%{
         background: url("../images/sprites/p1/left/walk4.png");
         background-size: 100% 100%;
+        left: 5%;
     }
     33.35%{
         background: url("../images/sprites/p1/left/walk5.png");
         background-size: 100% 100%;
+        left: 6%;
     }
     41.69%{
         background: url("../images/sprites/p1/left/walk6.png");
@@ -489,26 +539,32 @@ ul li{
     50.03%{
         background: url("../images/sprites/p1/left/walk7.png");
         background-size: 100% 100%;
+        left: 7%;
     }
     58.37%{
         background: url("../images/sprites/p1/left/walk8.png");
         background-size: 100% 100%;
+        left: 8%;
     }
     66.71%{
         background: url("../images/sprites/p1/left/walk9.png");
         background-size: 100% 100%;
+        left: 9%;
     }
     75.05%{
         background: url("../images/sprites/p1/left/walk10.png");
         background-size: 100% 100%;
+        left: 10%;
     }
     83.39%{
         background: url("../images/sprites/p1/left/walk11.png");
         background-size: 100% 100%;
+        left: 10%;
     }
     91.73%{
         background: url("../images/sprites/p1/left/walk12.png");
         background-size: 100% 100%;
+        left: 10%;
     }
     
 }
@@ -517,51 +573,63 @@ ul li{
     0%{
         background: url("../images/sprites/p1/left/walk12.png");
         background-size: 100% 100%;
+        left: 10%;
     }
     8.34%{
         background: url("../images/sprites/p1/left/walk11.png");
         background-size: 100% 100%;
+        left: 10%;
     }
     16.67%{
         background: url("../images/sprites/p1/left/walk10.png");
         background-size: 100% 100%;
+        left: 10%;
     }
     
     25.01%{
         background: url("../images/sprites/p1/left/walk9.png");
         background-size: 100% 100%;
+        left: 9%;
     }
     33.35%{
         background: url("../images/sprites/p1/left/walk8.png");
         background-size: 100% 100%;
+        left: 8%;
     }
     41.69%{
         background: url("../images/sprites/p1/left/walk7.png");
         background-size: 100% 100%;
+        left: 7%;
     }
     50.03%{
         background: url("../images/sprites/p1/left/walk6.png");
         background-size: 100% 100%;
+        left: 6%;
     }
     58.37%{
         background: url("../images/sprites/p1/left/walk5.png");
         background-size: 100% 100%;
+        left: 5%;
     }
     66.71%{
         background: url("../images/sprites/p1/left/walk4.png");
         background-size: 100% 100%;
+        left: 4%;
     }
     75.05%{
         background: url("../images/sprites/p1/left/walk3.png");
         background-size: 100% 100%;
+        left: 3%;
     }
     83.39%{
         background: url("../images/sprites/p1/left/walk2.png");
         background-size: 100% 100%;
+        left: 2%;
     }
     91.73%{
         background: url("../images/sprites/p1/left/walk1.png");
         background-size: 100% 100%;
+        left: 2%;
     }
     
 }

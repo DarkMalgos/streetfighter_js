@@ -10,8 +10,8 @@
 
 var pl1 = 0,
     pl2 = 0,
-    stage;
-    lock = false;
+    stage,
+    lock = 0;
 
 console.log(document.getElementById('logo').offsetTop);
 function show_menu(){
@@ -95,7 +95,7 @@ function player_enter(){
         pl2 = _id_perso_next;
         _sp.style.display = "none";
         _ss.style.display = "block";
-        lock = true;
+        lock = 1;
     }
 }
 
@@ -180,8 +180,8 @@ function stage_enter(){
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)),
     _ss = document.getElementById("select_stage"),
     _f = document.getElementById("fight"),
-    _p1 = document.getElementById("pl1"),
-    _p2 = document.getElementById("pl2");
+    _p1 = document.getElementById("po1"),
+    _p2 = document.getElementById("po6");
     
     stage = _id_stage_next;
     _ss.style.display = "none";
@@ -190,11 +190,75 @@ function stage_enter(){
     _f.style.display = "block";
     _p1.classList.add("left-" + pl1);
     _p2.classList.add("right-" + pl2);
+    lock = 2;
 }
 
+function pl1_right(){
+    var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
+        _po = _pl1.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _nb_po = parseInt(_po.charAt(2)) + 1;  
+    if (_nb_po < 7){
+        var _po_next = document.getElementById("po" + _nb_po),
+            _check_class = _po_next.getAttribute("class");
+        console.log(_check_class);
+        if (_check_class != ("right-" + pl2)) {
+            _po_bis.classList.remove("left-" + pl1);
+            _po_next.classList.add("left-" + pl1);
+        }
+    }
+}
+
+function pl1_left(){
+    var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
+        _po = _pl1.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _nb_po = parseInt(_po.charAt(2)) - 1;  
+    if (_nb_po > 0){
+        var _po_next = document.getElementById("po" + _nb_po),
+            _check_class = _po_next.getAttribute("class");
+        console.log(_check_class);
+        if (_check_class != ("right-" + pl2)) {
+            _po_bis.classList.remove("left-" + pl1);
+            _po_next.classList.add("left-" + pl1);
+        }
+    } 
+}
+
+function pl2_right(){
+    var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _po = _pl2.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _nb_po = parseInt(_po.charAt(2)) + 1;  
+    if (_nb_po < 7){
+        var _po_next = document.getElementById("po" + _nb_po),
+            _check_class = _po_next.getAttribute("class");
+        console.log(_check_class);
+        if (_check_class != ("left-" + pl1)) {
+            _po_bis.classList.remove("right-" + pl2);
+            _po_next.classList.add("right-" + pl2);
+        }
+    }
+}
+
+function pl2_left(){
+    var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _po = _pl2.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _nb_po = parseInt(_po.charAt(2)) - 1;  
+    if (_nb_po > 0){
+        var _po_next = document.getElementById("po" + _nb_po),
+            _check_class = _po_next.getAttribute("class");
+        console.log(_check_class);
+        if (_check_class != ("left-" + pl1)) {
+            _po_bis.classList.remove("right-" + pl2);
+            _po_next.classList.add("right-" + pl2);
+        }
+    }
+}
 function move_selector(e){
     console.log(e.keyCode);
-    if (lock == false){
+    if (lock == 0){
         console.log("false");
         /*if (e.keyCode == 40) 
             down();*/
@@ -206,7 +270,7 @@ function move_selector(e){
             player_left();
         else if (e.keyCode == 13)
             player_enter();
-    } else {
+    } else if (lock == 1) {
          if (e.keyCode == 40) 
             stage_down();
         if (e.keyCode == 39)
@@ -217,6 +281,24 @@ function move_selector(e){
             stage_left();
         else if (e.keyCode == 13)
             stage_enter();
+    } else {
+        /*if (e.keyCode == 40) 
+            pl2_down();
+        else*/ if (e.keyCode == 39){
+            pl2_right();
+        }/*else if (e.keyCode == 38)
+            pl2_up();*/
+        else if (e.keyCode == 37)
+            pl2_left();
+        /*else if (e.keyCode == 83) 
+            pl1_down();*/
+        else if (e.keyCode == 68){
+            pl1_right();
+        }/*else if (e.keyCode == 90)
+            pl1_up();*/
+        else if (e.keyCode == 81){
+            pl1_left();
+        }
     }
 }
 
