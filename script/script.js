@@ -72,6 +72,18 @@ function back_select_player(){
 var back_player = document.getElementsByClassName("fleche")[0];
 back_player.addEventListener('click', back_select_player);
 
+function back_select_stage (){
+    var _ss = document.getElementById("select_stage"),
+        _sp = document.getElementById("select_player");
+
+        lock = 0;
+        _ss.style.display = "none";
+        _sp.style.display = "block";
+}
+
+var back_stage = document.getElementsByClassName("fleche")[1];
+back_stage.addEventListener('click', back_select_stage);
+
 function player_right()
 {
     var _class_selection = document.getElementsByClassName("selection")[0],
@@ -199,14 +211,21 @@ function stage_left(){
     }
 }
 
+function start_fight(){
+    
+}
+
 function stage_enter(){
     var _class_selection = document.getElementsByClassName("selection")[1],
-    _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)),
-    _ss = document.getElementById("select_stage"),
-    _f = document.getElementById("fight"),
-    _p1 = document.getElementById("po1"),
-    _p2 = document.getElementById("po6");
-
+        _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)),
+        _ss = document.getElementById("select_stage"),
+        _f = document.getElementById("fight"),
+        _p1 = document.getElementById("po1"),
+        _p2 = document.getElementById("po6"),
+        _timer = document.getElementById("Timer"),
+        interval,
+        t = 4;
+        
     _ss.style.display = "none";
     _f.style.display = "block";
     _p1.classList.add("left-" + pl1);
@@ -222,11 +241,13 @@ function stage_enter(){
     }
 
            
-    /*if (){
-        
+    if (t == 0){
+        lock = 3;
+        clearInterval(interval);
+        _timer.style.display = "none";
     } else {
-        
-    }*/
+        interval = setInterval(start_fight, 1000);
+    }
 }
 
 function pl1_right(){
