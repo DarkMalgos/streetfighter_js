@@ -11,6 +11,8 @@
 var pl1 = 0,
     pl2 = 0,
     stage,
+    t = 4,
+    interval,
     lock = 0;
 
 function show_menu(){
@@ -212,7 +214,21 @@ function stage_left(){
 }
 
 function start_fight(){
+    var _timer = document.getElementById("Timer");
     
+    --t;
+    
+    console.log(t);
+    if (t <= -1){
+        console.log("toto");
+        lock = 3;
+        clearInterval(interval);
+        _timer.style.display = "none";
+    } else if (t > 0) {
+        _timer.style.background = "url(images/Sources/" + t + ".png) no-repeat center";
+    } else {
+        _timer.style.background = "url(images/Sources/fight.png) no-repeat center";
+    }
 }
 
 function stage_enter(){
@@ -221,10 +237,8 @@ function stage_enter(){
         _ss = document.getElementById("select_stage"),
         _f = document.getElementById("fight"),
         _p1 = document.getElementById("po1"),
-        _p2 = document.getElementById("po6"),
-        _timer = document.getElementById("Timer"),
-        interval,
-        t = 4;
+        _p2 = document.getElementById("po6");
+        
         
     _ss.style.display = "none";
     _f.style.display = "block";
@@ -239,15 +253,7 @@ function stage_enter(){
         _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".jpg) no-repeat";
         _f.style.backgroundSize = "100% 100%";
     }
-
-           
-    if (t == 0){
-        lock = 3;
-        clearInterval(interval);
-        _timer.style.display = "none";
-    } else {
-        interval = setInterval(start_fight, 1000);
-    }
+    interval = setInterval(start_fight, 1000);
 }
 
 function pl1_right(){
