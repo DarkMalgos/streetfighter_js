@@ -186,13 +186,20 @@ function stage_enter(){
     _p2 = document.getElementById("po6");
 
     _ss.style.display = "none";
-    _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".jpg) no-repeat";
-    _f.style.backgroundSize = "100% 100%";
     _f.style.display = "block";
     _p1.classList.add("left-" + pl1);
     _p2.classList.add("right-" + pl2);
     lock = 2;
-    
+
+    if (_id_stage_next == 2 || _id_stage_next == 3) {
+        _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".png) no-repeat";
+        _f.style.backgroundSize = "100% 100%";
+    } else {
+        _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".jpg) no-repeat";
+        _f.style.backgroundSize = "100% 100%";
+    }
+
+           
     /*if (){
         
     } else {
