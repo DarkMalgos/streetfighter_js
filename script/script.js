@@ -13,36 +13,38 @@ var pl1 = 0,
     stage,
     lock = 0;
 
-console.log(document.getElementById('logo').offsetTop);
 function show_menu(){
-    var l = document.getElementById('logo');
-    l.style.top = "0";
-    var s = document.getElementById('start');
-    s.style.display = "block";
-    var e = document.getElementById('exit');
-    e.style.display = "block";
+    var _l = document.getElementById('logo'),
+        _s = document.getElementById('start'),
+        _e = document.getElementById('exit');
+    
+    _l.style.top = "0";
+    _s.style.display = "block";
+    _e.style.display = "block";
 }
 
 var l = document.getElementById("logo");
 l.addEventListener('click', show_menu);
 
 function disable_menu(){
-    var l = document.getElementById('logo');
-    l.style.top = "30%";
-    var s = document.getElementById('start');
-    s.style.display = "none";
-    var e = document.getElementById('exit');
-    e.style.display = "none";
+    var _l = document.getElementById('logo'),
+        _s = document.getElementById('start'),
+        _e = document.getElementById('exit');
+    
+    _l.style.top = "30%";
+    _s.style.display = "none";
+    _e.style.display = "none";
 }
 
 var e = document.getElementById("exit");
 e.addEventListener('click', disable_menu);
 
 function show_select_player(){
-    var l = document.getElementById('menu');
-    l.style.display = "none";
-    var sp = document.getElementById('select_player');
-    sp.style.display = "block";
+    var _l = document.getElementById('menu'),
+        _sp = document.getElementById('select_player');
+    
+    _l.style.display = "none";
+    _sp.style.display = "block";
 }
 
 var s = document.getElementById("start");
@@ -52,9 +54,9 @@ function player_right()
 {
     var _class_selection = document.getElementsByClassName("selection")[0],
         _id = _class_selection.getAttribute('id'),
-        _id_perso = document.getElementById(_id);
+        _id_perso = document.getElementById(_id),
     _id_perso_next = parseInt(_class_selection.getAttribute('id').charAt(1)) + 1;
-    console.log(_id);
+
     if (_id_perso_next <= 6){
         var _perso_next = document.getElementById('p' + _id_perso_next);
         _id_perso.classList.remove("selection");
@@ -67,9 +69,9 @@ function player_right()
 function player_left(){
       var _class_selection = document.getElementsByClassName("selection")[0],
         _id = _class_selection.getAttribute('id'),
-        _id_perso = document.getElementById(_id);
+        _id_perso = document.getElementById(_id),
     _id_perso_next = parseInt(_class_selection.getAttribute('id').charAt(1)) - 1;
-    console.log(_id_perso);
+
     if (_id_perso_next >= 1){
         var _perso_next = document.getElementById('p' + _id_perso_next);
         _id_perso.classList.remove("selection");
@@ -104,7 +106,7 @@ function stage_down(){
         _id = _class_selection.getAttribute('id'),
         _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) + 3;
-    console.log(_id_stage_next);
+
     if (_id_stage_next <= 6){
         var _stage_next = document.getElementById('Stage' + _id_stage_next);
         _id_stage.classList.remove("selection");
@@ -119,7 +121,7 @@ function stage_up(){
         _id = _class_selection.getAttribute('id'),
         _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) - 3;
-    console.log(_id_stage_next);
+
     if (_id_stage_next >= 1){
         var _stage_next = document.getElementById('Stage' + _id_stage_next);
         _id_stage.classList.remove("selection");
@@ -134,7 +136,7 @@ function stage_right(){
         _id = _class_selection.getAttribute('id'),
         _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) + 1;
-    console.log(_id_stage_next);
+
     if (_id_stage_next <= 3){
         var _stage_next = document.getElementById('Stage' + _id_stage_next);
         _id_stage.classList.remove("selection");
@@ -157,7 +159,7 @@ function stage_left(){
         _id = _class_selection.getAttribute('id'),
         _id_stage = document.getElementById(_id),
     _id_stage_next = parseInt(_class_selection.getAttribute('id').charAt(5)) - 1;
-    console.log(_id_stage_next);
+
     if (_id_stage_next >= 4){
         var _stage_next = document.getElementById('Stage' + _id_stage_next);
         _id_stage.classList.remove("selection");
@@ -182,8 +184,7 @@ function stage_enter(){
     _f = document.getElementById("fight"),
     _p1 = document.getElementById("po1"),
     _p2 = document.getElementById("po6");
-    
-    stage = _id_stage_next;
+
     _ss.style.display = "none";
     _f.style.background = "url(images/selectstages/stage" + _id_stage_next + ".jpg) no-repeat";
     _f.style.backgroundSize = "100% 100%";
@@ -191,13 +192,20 @@ function stage_enter(){
     _p1.classList.add("left-" + pl1);
     _p2.classList.add("right-" + pl2);
     lock = 2;
+    
+    /*if (){
+        
+    } else {
+        
+    }*/
 }
 
 function pl1_right(){
     var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
         _po = _pl1.getAttribute('id'),
         _po_bis = document.getElementById(_po),
-        _nb_po = parseInt(_po.charAt(2)) + 1;  
+        _nb_po = parseInt(_po.charAt(2)) + 1;
+    
     if (_nb_po < 7){
         var _po_next = document.getElementById("po" + _nb_po),
             _check_class = _po_next.getAttribute("class");
@@ -245,7 +253,7 @@ function pl2_left(){
     var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
         _po = _pl2.getAttribute('id'),
         _po_bis = document.getElementById(_po),
-        _nb_po = parseInt(_po.charAt(2)) - 1;  
+        _nb_po = parseInt(_po.charAt(2)) - 1;
     if (_nb_po > 0){
         var _po_next = document.getElementById("po" + _nb_po),
             _check_class = _po_next.getAttribute("class");
@@ -256,6 +264,7 @@ function pl2_left(){
         }
     }
 }
+
 function move_selector(e){
     console.log(e.keyCode);
     if (lock == 0){
@@ -281,7 +290,7 @@ function move_selector(e){
             stage_left();
         else if (e.keyCode == 13)
             stage_enter();
-    } else {
+    } else if (lock == 3){
         /*if (e.keyCode == 40) 
             pl2_down();
         else*/ if (e.keyCode == 39){
@@ -303,4 +312,3 @@ function move_selector(e){
 }
 
 addEventListener('keydown', move_selector);
-
