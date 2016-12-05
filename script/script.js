@@ -53,15 +53,24 @@ s.addEventListener('click', show_select_player);
 function back_select_player(){
     var _mp = document.getElementById("message_player"),
         _sp = document.getElementById("select_player"),
-        _m = document.getElementById("menu");
+        _m = document.getElementById("menu"),
+        _s = document.getElementById("start"),
+        _e = document.getElementById("exit"),
+        _l = document.getElementById("logo");
     
-    if (m_p.innerHTML == "Player 2 select your perso"){
+    if (_mp.innerHTML == "Player 2 select your perso"){
         _mp.innerHTML = "Player 1 select your perso";
     } else {
         _sp.style.display = "none";
         _m.style.display = "block";
+        _l.style.top = "30%";
+        _s.style.display = "none";
+        _e.style.display = "none";
     }
 }
+
+var back_player = document.getElementsByClassName("fleche")[0];
+back_player.addEventListener('click', back_select_player);
 
 function player_right()
 {
