@@ -50,6 +50,19 @@ function show_select_player(){
 var s = document.getElementById("start");
 s.addEventListener('click', show_select_player);
 
+function back_select_player(){
+    var _mp = document.getElementById("message_player"),
+        _sp = document.getElementById("select_player"),
+        _m = document.getElementById("menu");
+    
+    if (m_p.innerHTML == "Player 2 select your perso"){
+        _mp.innerHTML = "Player 1 select your perso";
+    } else {
+        _sp.style.display = "none";
+        _m.style.display = "block";
+    }
+}
+
 function player_right()
 {
     var _class_selection = document.getElementsByClassName("selection")[0],
