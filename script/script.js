@@ -12,7 +12,7 @@ var pl1 = 0,
     pl2 = 0,
     stage,
     t = 4,
-    interval,
+    interval;
     lock = 0;
 
 function show_menu(){
@@ -237,7 +237,8 @@ function stage_enter(){
         _ss = document.getElementById("select_stage"),
         _f = document.getElementById("fight"),
         _p1 = document.getElementById("po1"),
-        _p2 = document.getElementById("po6");
+        _p2 = document.getElementById("po6"),
+        _timer = document.getElementById("Timer");
         
         
     _ss.style.display = "none";
