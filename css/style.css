@@ -384,82 +384,73 @@ ul li{
 }
 
 #po1 {
-    height: 120px;
-    width: 100px;
     position: absolute;
-    top: 50%;
-    left: 2%;
+    left: 5%;
 }
 
 #po2 {
-    width: 500px;
-    height: 301px;
     position: absolute;
-    top: 50%;
-    left: 10%;
-}
-
-#po3 {
-    width: 500px;
-    height: 301px;
-    position: absolute;
-    top: 50%;
     left: 20%;
 }
 
-#po4 {
-    width: 500px;
-    height: 301px;
+#po3 {
     position: absolute;
-    top: 50%;
-    left: 30%;
+    left: 35%;
+}
+
+#po4 {
+    position: absolute;
+    left: 50%;
 }
 
 #po5 {
-    width: 500px;
-    height: 301px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    left: 65%;
 }
 
 #po6 {
     position: absolute;
-    top: 50%;
-    left: 60%;
+    left: 80%;
 }
 
 .left-1{
+    height: 200px;
+    width: 170px;
     background: url("../images/sprites/p1/left/stand-2.png");
     background-size: 100% 100%;
+    top: 63%;
     -webkit-animation :
         ryu-stand-left 2s alternate infinite;
 }
 
 .right-1{
+    height: 200px;
+    width: 170px;
     background: url("../images/sprites/p1/right/stand-2.png");
     background-size: 100% 100%;
+    top: 63%;
     -webkit-animation:
         ryu-stand-right 2s alternate infinite;
 }
 
 .left-2{
-    height: 120px;
-    width: 100px;
+    height: 150px;
+    width: 170px;
     background: url("../images/sprites/p2/left/stand1.png") no-repeat center;
-
+    background-size: 100% 100%;
+    top: 70%;
     /*-webkit-animation :
         chunli-stand-left 2s alternate infinite;*/
 }
 
 .right-2{
-    height: 120px;
-    width: 100px;
+    height: 150px;
+    width: 170px;
     background: url("../images/sprites/p2/right/stand1.png") no-repeat center;
-    top = 70%;
-    left: 70%;
-    -webkit-animation:
-        chunli-stand-right 2s alternate infinite;
+    background-size: 100% 100%;
+    top: 70%;
+    /*-webkit-animation:
+        chunli-stand-right 2s alternate infinite;*/
 }
 
 @-webkit-keyframes ryu-stand-left{
