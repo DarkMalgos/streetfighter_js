@@ -423,6 +423,24 @@ ul li{
         ryu-stand-left 2s alternate infinite;
 }
 
+.left-punch-1{
+    height: 200px;
+    width: 220px;
+    background: url("../images/sprites/p1/left/attack1.2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-kick-1{
+    height: 200px;
+    width: 250px;
+    background: url("../images/sprites/p1/left/attack2.2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
 .right-1{
     height: 200px;
     width: 170px;
@@ -431,6 +449,18 @@ ul li{
     top: 63%;
     -webkit-animation:
         ryu-stand-right 2s alternate infinite;
+}
+
+.right-punch-1{
+    background: url("../images/sprites/p1/right/attack1.2.png");
+    background-size: 100% 100%;
+    left: 75%;
+    z-index: 10;
+}
+
+.right-kick-1{
+   -webkit-animation :
+        ryu-kick-left 2s alternate 1; 
 }
 
 .left-2{

@@ -288,6 +288,63 @@ function pl1_left(){
     }
 }
 
+function pl1_punch(){
+    console.log("titi");
+    var _pl1 = document.getElementsByClassName("left-punch-" + pl1)[0],
+        _po = _pl1.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+    
+    _pl1.classList.remove("left-punch-" + pl1);
+    _pl1.classList.add("left-" + pl1);
+    _po_bis.style.left = _left - 50 + "px";
+}
+
+function pl1_kick(){
+    console.log("titi");
+    var _pl1 = document.getElementsByClassName("left-kick-" + pl1)[0],
+        _po = _pl1.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+    
+    _pl1.classList.remove("left-kick-" + pl1);
+    _pl1.classList.add("left-" + pl1);
+    _po_bis.style.left = _left - 50 + "px";
+}
+
+function pl1_t(){
+    console.log("toto");
+    var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
+        _po = _pl1.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+        _pl2 = document.getElementsByClassName("right-" + pl2)[0];
+    
+    _pl1.classList.remove("left-" + pl1);
+    _pl1.classList.add("left-punch-" + pl1);
+    _po_bis.style.left = _left + 50 + "px";
+    if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
+        console.log("touché");
+    }
+    setTimeout(pl1_punch, 500);
+}
+
+function pl1_y(){
+    var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
+        _po = _pl1.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+        _pl2 = document.getElementsByClassName("right-" + pl2)[0];
+    
+    _pl1.classList.remove("left-" + pl1);
+    _pl1.classList.add("left-kick-" + pl1);
+    _po_bis.style.left = _left + 50 + "px";
+    if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
+        console.log("touché");
+    }
+    setTimeout(pl1_kick, 500);
+}
+
 function pl2_right(){
     var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
         _po = _pl2.getAttribute('id'),
@@ -319,7 +376,9 @@ function pl2_left(){
     }
 }
 
+
 function move_selector(e){
+    console.log(e.keyCode);
     if (lock == 0){
         /*if (e.keyCode == 40) 
             down();*/
@@ -359,6 +418,12 @@ function move_selector(e){
             pl1_up();*/
         else if (e.keyCode == 81){
             pl1_left();
+        }
+        else if (e.keyCode == 84){
+            pl1_t();
+        }
+        else if (e.keyCode == 89){
+            pl1_y();
         }
     }
 }
