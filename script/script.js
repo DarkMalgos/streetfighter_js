@@ -297,7 +297,7 @@ function pl1_punch(){
     
     _pl1.classList.remove("left-punch-" + pl1);
     _pl1.classList.add("left-" + pl1);
-    _po_bis.style.left = _left - 50 + "px";
+    _po_bis.style.left = _left - 80 + "px";
 }
 
 function pl1_kick(){
@@ -309,7 +309,7 @@ function pl1_kick(){
     
     _pl1.classList.remove("left-kick-" + pl1);
     _pl1.classList.add("left-" + pl1);
-    _po_bis.style.left = _left - 50 + "px";
+    _po_bis.style.left = _left - 80 + "px";
 }
 
 function pl1_t(){
@@ -322,7 +322,7 @@ function pl1_t(){
     
     _pl1.classList.remove("left-" + pl1);
     _pl1.classList.add("left-punch-" + pl1);
-    _po_bis.style.left = _left + 50 + "px";
+    _po_bis.style.left = _left + 80 + "px";
     if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
         console.log("touché");
     }
@@ -338,7 +338,7 @@ function pl1_y(){
     
     _pl1.classList.remove("left-" + pl1);
     _pl1.classList.add("left-kick-" + pl1);
-    _po_bis.style.left = _left + 50 + "px";
+    _po_bis.style.left = _left + 80 + "px";
     if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
         console.log("touché");
     }
