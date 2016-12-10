@@ -345,6 +345,63 @@ function pl1_y(){
     setTimeout(pl1_kick, 500);
 }
 
+function pl2_punch(){
+    var _pl2 = document.getElementsByClassName("right-punch-" + pl2)[0],
+        _po = _pl2.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+    
+    _pl2.classList.remove("right-punch-" + pl2);
+    _pl2.classList.add("right-" + pl2);
+    _po_bis.style.left = _left + 100 + "px";
+}
+
+function pl2_kick(){
+    console.log("titi");
+    var _pl2 = document.getElementsByClassName("right-kick-" + pl2)[0],
+        _po = _pl2.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+    
+    _pl2.classList.remove("right-kick-" + pl2);
+    _pl2.classList.add("right-" + pl2);
+    _po_bis.style.left = _left + 100 + "px";
+}
+
+function pl2_t(){
+    console.log("toto");
+    var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _po = _pl2.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+        _pl1 = document.getElementsByClassName("left-" + pl1)[0];
+    
+    _pl2.classList.remove("right-" + pl2);
+    _pl2.classList.add("right-punch-" + pl2);
+    _po_bis.style.left = _left - 100 + "px";
+    if (_pl2.offsetLeft <= (_pl1.offsetLeft + 220)){
+        console.log("touché");
+    }
+    setTimeout(pl2_punch, 500);
+}
+
+function pl2_y(){
+    console.log("toto");
+    var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _po = _pl2.getAttribute('id'),
+        _po_bis = document.getElementById(_po),
+        _left = _po_bis.offsetLeft;
+        _pl1 = document.getElementsByClassName("left-" + pl1)[0];
+    
+    _pl2.classList.remove("right-" + pl2);
+    _pl2.classList.add("right-kick-" + pl2);
+    _po_bis.style.left = _left - 100 + "px";
+    if (_pl2.offsetLeft <= (_pl1.offsetLeft + 220)){
+        console.log("touché");
+    }
+    setTimeout(pl2_kick, 500);
+}
+
 function pl2_right(){
     var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
         _po = _pl2.getAttribute('id'),
@@ -424,6 +481,12 @@ function move_selector(e){
         }
         else if (e.keyCode == 89){
             pl1_y();
+        }
+        else if (e.keyCode == 18){
+            pl2_t();
+        }
+        else if (e.keyCode == 16){
+            pl2_y();
         }
     }
 }
