@@ -9,7 +9,9 @@
 =============================================================*/
 
 var pl1 = 0,
+    pl1_life = 0,
     pl2 = 0,
+    pl2_life = 0,
     stage,
     t = 4,
     interval;
@@ -324,7 +326,7 @@ function pl1_t(){
     _pl1.classList.add("left-punch-" + pl1);
     _po_bis.style.left = _left + 80 + "px";
     if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
-        console.log("touché");
+        
     }
     setTimeout(pl1_punch, 500);
 }
