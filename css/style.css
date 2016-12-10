@@ -533,12 +533,48 @@ ul li{
     top: 63%;
 }
 
+.left-punch-3{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p3/left/attack1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-kick-3{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p3/left/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
 .right-3{
     height: 200px;
     width: 170px;
     background: url("../images/sprites/p3/right/stand1.png");
     background-size: 100% 100%;
     top: 63%;
+}
+
+.right-punch-3{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p3/right/attack1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.right-kick-3{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p3/right/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
 }
 
 .left-5{
@@ -551,6 +587,24 @@ ul li{
         akuma-stand-left 2s alternate infinite;
 }
 
+.left-punch-5{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p5/left/attack1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-kick-5{
+    height: 200px;
+    width: 250px;
+    background: url("../images/sprites/p5/left/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
 .right-5{
     height: 200px;
     width: 170px;
@@ -559,6 +613,24 @@ ul li{
     top: 63%;
     -webkit-animation :
         akuma-stand-right 2s alternate infinite;
+}
+
+.right-punch-5{
+    height: 200px;
+    width: 200px;
+    background: url("../images/sprites/p5/right/attack1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.right-kick-5{
+    height: 200px;
+    width: 250px;
+    background: url("../images/sprites/p5/right/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
 }
 
 @-webkit-keyframes ryu-stand-left{
