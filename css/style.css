@@ -399,12 +399,37 @@ ul li{
 }
 
 #Timer{
+    display: none;
     width: 37%;
     height: 52%;
     position: absolute;
     top: 47%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
+}
+
+#restart{
+    display: none;
+    width: 214px;
+    height: 50px;
+    top: 55%;
+    left: 40%;
+    position: absolute;
+    text-align: center;
+    color: yellow;
+    font-size: 50px;
+}
+
+#exit2 {
+    display: none;
+    width: 214px;
+    height: 50px;
+    top: 70%;
+    left: 42%;
+    position: absolute;
+    text-align: center;
+    color: yellow;
+    font-size: 50px;
 }
 
 #po1 {

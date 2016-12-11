@@ -11,7 +11,7 @@
 var pl1 = 0,
     pl1_life = 0,
     pl2 = 0,
-    pl2_life = 12,
+    pl2_life = 0,
     stage,
     t = 4,
     interval;
@@ -133,6 +133,7 @@ function player_enter(){
         pl1 = _id_perso_next;
         _message_player.innerHTML = "Player 2 select your perso";
     } else {
+        console.log("toto");
         pl2 = _id_perso_next;
         _sp.style.display = "none";
         _ss.style.display = "block";
@@ -225,6 +226,7 @@ function start_fight(){
         clearInterval(interval);
         _timer.style.display = "none";
     } else if (t > 0) {
+        _timer.style.display = "block";
         _timer.style.background = "url(images/Sources/" + t + ".png) no-repeat center";
     } else {
         _timer.style.background = "url(images/Sources/fight.png) no-repeat center";
@@ -320,7 +322,9 @@ function pl1_t(){
         _po = _pl1.getAttribute('id'),
         _po_bis = document.getElementById(_po),
         _left = _po_bis.offsetLeft,
-        _ko = document.getElementById("Timer");
+        _ko = document.getElementById("Timer"),
+        _re = document.getElementById("restart"),
+        _e2 = document.getElementById("exit2"),
         _pl2 = document.getElementsByClassName("right-" + pl2)[0],
         _pl2_life = document.getElementById("pl2-life");
     
@@ -337,6 +341,8 @@ function pl1_t(){
             _ko.style.display = "block";
             _ko.style.top = "35%";
             _ko.style.background = "url(images/Sources/ko.png) no-repeat center";
+            _re.style.display = "block";
+            _e2.style.display = "block";
             lock = 4;  
         } else {
             _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
@@ -352,6 +358,8 @@ function pl1_y(){
         _po_bis = document.getElementById(_po),
         _left = _po_bis.offsetLeft,
         _ko = document.getElementById("Timer"),
+        _re = document.getElementById("restart"),
+        _e2 = document.getElementById("exit2"),
         _pl2_life = document.getElementById("pl2-life"),
         _pl2 = document.getElementsByClassName("right-" + pl2)[0];
     
@@ -366,8 +374,10 @@ function pl1_y(){
             _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
             _pl2_life.style.backgroundSize = "100% 100%";
             _ko.style.display = "block";
-            _ko.style.background = "url(images/Sources/ko.png)";
-            _ko.style.backgroundSize = "100% 100%";
+            _ko.style.top = "35%";
+            _ko.style.background = "url(images/Sources/ko.png) no-repeat center";
+            _re.style.display = "block";
+            _e2.style.display = "block";
             lock = 4;  
         } else {
             _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
@@ -407,6 +417,8 @@ function pl2_t(){
         _po_bis = document.getElementById(_po),
         _left = _po_bis.offsetLeft,
         _ko = document.getElementById("Timer"),
+        _re = document.getElementById("restart"),
+        _e2 = document.getElementById("exit2"),
         _pl1_life = document.getElementById("pl1-life"),
         _pl1 = document.getElementsByClassName("left-" + pl1)[0];
     
@@ -416,13 +428,15 @@ function pl2_t(){
     if (_pl2.offsetLeft <= (_pl1.offsetLeft + 220)){
         ++pl1_life;
         if (pl1_life == 1){
-            _pl2_life.style.display = "inline-block";
+            _pl1_life.style.display = "inline-block";
         } else if (pl1_life == 13){
             _pl1_life.style.background = "url(images/Sources/left-life" + pl1_life + ".png)";
             _pl1_life.style.backgroundSize = "100% 100%";
             _ko.style.display = "block";
-            _ko.style.background = "url(images/Sources/ko.png)";
-            _ko.style.backgroundSize = "100% 100%";
+            _ko.style.top = "35%";
+            _ko.style.background = "url(images/Sources/ko.png) no-repeat center";
+            _re.style.display = "block";
+            _e2.style.display = "block";
             lock = 4;  
         } else {
             _pl1_life.style.background = "url(images/Sources/left-life" + pl1_life + ".png)";
@@ -439,6 +453,8 @@ function pl2_y(){
         _po_bis = document.getElementById(_po),
         _left = _po_bis.offsetLeft,
         _ko = document.getElementById("Timer"),
+        _re = document.getElementById("restart"),
+        _e2 = document.getElementById("exit2"),
         _pl1_life = document.getElementById("pl1-life"),
         _pl1 = document.getElementsByClassName("left-" + pl1)[0];
     
@@ -453,9 +469,11 @@ function pl2_y(){
             _pl1_life.style.background = "url(/images/Sources/left-life" + pl1_life + ".png)";
             _pl1_life.style.backgroundSize = "100% 100%";
             _ko.style.display = "block";
-            _ko.style.background = "url(images/Sources/ko.png)";
-            _ko.style.backgroundSize = "100% 100%";
+            _ko.style.top = "35%";
+            _ko.style.background = "url(images/Sources/ko.png) no-repeat center";
             _ko.style.display = "block";
+            _re.style.display = "block";
+            _e2.style.display = "block";
             lock = 4;  
         } else {
             _pl1_life.style.background = "url(images/Sources/left-life" + pl1_life + ".png)";
@@ -555,3 +573,71 @@ function move_selector(e){
 }
 
 addEventListener('keydown', move_selector);
+
+function restart(){
+    var _f = document.getElementById('fight'),
+        _ko = document.getElementById("Timer"),
+        _re = document.getElementById("restart"),
+        _e2 = document.getElementById("exit2"),
+        _pl1_life = document.getElementById("pl1-life"),
+        _pl2_life = document.getElementById("pl2-life"),
+        _pl1 = document.getElementsByClassName("left-" + pl1)[0],
+        _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _mp = document.getElementById('message_player'),
+        _sp = document.getElementById('select_player');
+    
+    lock = 0;
+    t = 4;
+    pl1_life = 0;
+    pl2_life = 0;
+    _ko.style.display = "none";
+    _re.style.display = "none";
+    _e2.style.display = "none";
+    _pl1_life.style.display = "none";
+    _pl2_life.style.display = "none";
+    _pl1.classList.remove("left-" + pl1);
+    _pl2.classList.remove("right-" + pl2);
+    _f.style.display = "none";
+    _mp.innerHTML = "Player 1 select your perso";
+    _sp.style.display = "block";
+    
+}
+
+var r = document.getElementById("restart");
+r.addEventListener('click', restart);
+
+function exit(){
+    var _l = document.getElementById('menu'),
+        _ko = document.getElementById("Timer"),
+        _re = document.getElementById("restart"),
+        _e2 = document.getElementById("exit2"),
+        _pl1_life = document.getElementById("pl1-life"),
+        _pl2_life = document.getElementById("pl2-life"),
+        _pl1 = document.getElementsByClassName("left-" + pl1)[0],
+        _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _mp = document.getElementById('message_player'),
+        _f = document.getElementById('fight');
+    
+    lock = 0;
+    t = 4;
+    pl1_life = 0;
+    pl2_life = 0;
+    _ko.style.display = "none";
+    _re.style.display = "none";
+    _e2.style.display = "none";
+    _pl1_life.style.background = "url(images/Sources/left-life1.png)"
+    _pl1_life.style.backgroundSize = "100% 100%";
+    _pl1_life.style.display = "none";
+    _pl2_life.style.background = "url(images/Sources/right-life1.png)"
+    _pl2_life.style.backgroundSize = "100% 100%";
+    _pl2_life.style.display = "none";
+    _pl1.classList.remove("left-" + pl1);
+    _pl2.classList.remove("right-" + pl2);
+    _f.style.display = "none";
+    _mp.innerHTML = "Player 1 select your perso";
+    _l.style.display = "block";
+    disable_menu();
+}
+
+var e2 = document.getElementById("exit2");
+e2.addEventListener('click', exit);
