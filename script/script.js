@@ -11,7 +11,7 @@
 var pl1 = 0,
     pl1_life = 0,
     pl2 = 0,
-    pl2_life = 0,
+    pl2_life = 12,
     stage,
     t = 4,
     interval;
@@ -319,14 +319,29 @@ function pl1_t(){
     var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
         _po = _pl1.getAttribute('id'),
         _po_bis = document.getElementById(_po),
-        _left = _po_bis.offsetLeft;
-        _pl2 = document.getElementsByClassName("right-" + pl2)[0];
+        _left = _po_bis.offsetLeft,
+        _ko = document.getElementById("Timer");
+        _pl2 = document.getElementsByClassName("right-" + pl2)[0],
+        _pl2_life = document.getElementById("pl2-life");
     
     _pl1.classList.remove("left-" + pl1);
     _pl1.classList.add("left-punch-" + pl1);
     _po_bis.style.left = _left + 80 + "px";
     if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
-        
+        ++pl2_life;
+        if (pl2_life == 1){
+            _pl2_life.style.display = "inline-block";
+        } else if (pl2_life == 13){
+            _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
+            _pl2_life.style.backgroundSize = "100% 100%";
+            _ko.style.display = "block";
+            _ko.style.top = "35%";
+            _ko.style.background = "url(images/Sources/ko.png) no-repeat center";
+            lock = 4;  
+        } else {
+            _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
+            _pl2_life.style.backgroundSize = "100% 100%";
+        }
     }
     setTimeout(pl1_punch, 500);
 }
@@ -335,14 +350,29 @@ function pl1_y(){
     var _pl1 = document.getElementsByClassName("left-" + pl1)[0],
         _po = _pl1.getAttribute('id'),
         _po_bis = document.getElementById(_po),
-        _left = _po_bis.offsetLeft;
+        _left = _po_bis.offsetLeft,
+        _ko = document.getElementById("Timer"),
+        _pl2_life = document.getElementById("pl2-life"),
         _pl2 = document.getElementsByClassName("right-" + pl2)[0];
     
     _pl1.classList.remove("left-" + pl1);
     _pl1.classList.add("left-kick-" + pl1);
     _po_bis.style.left = _left + 80 + "px";
     if ((_pl1.offsetLeft + 220) >= _pl2.offsetLeft){
-        console.log("touché");
+        ++pl2_life;
+        if (pl2_life == 1){
+            _pl2_life.style.display = "inline-block";
+        } else if (pl2_life == 13){
+            _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
+            _pl2_life.style.backgroundSize = "100% 100%";
+            _ko.style.display = "block";
+            _ko.style.background = "url(images/Sources/ko.png)";
+            _ko.style.backgroundSize = "100% 100%";
+            lock = 4;  
+        } else {
+            _pl2_life.style.background = "url(images/Sources/right-life" + pl2_life + ".png)";
+            _pl2_life.style.backgroundSize = "100% 100%";
+        }
     }
     setTimeout(pl1_kick, 500);
 }
@@ -375,14 +405,29 @@ function pl2_t(){
     var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
         _po = _pl2.getAttribute('id'),
         _po_bis = document.getElementById(_po),
-        _left = _po_bis.offsetLeft;
+        _left = _po_bis.offsetLeft,
+        _ko = document.getElementById("Timer"),
+        _pl1_life = document.getElementById("pl1-life"),
         _pl1 = document.getElementsByClassName("left-" + pl1)[0];
     
     _pl2.classList.remove("right-" + pl2);
     _pl2.classList.add("right-punch-" + pl2);
     _po_bis.style.left = _left - 100 + "px";
     if (_pl2.offsetLeft <= (_pl1.offsetLeft + 220)){
-        console.log("touché");
+        ++pl1_life;
+        if (pl1_life == 1){
+            _pl2_life.style.display = "inline-block";
+        } else if (pl1_life == 13){
+            _pl1_life.style.background = "url(images/Sources/left-life" + pl1_life + ".png)";
+            _pl1_life.style.backgroundSize = "100% 100%";
+            _ko.style.display = "block";
+            _ko.style.background = "url(images/Sources/ko.png)";
+            _ko.style.backgroundSize = "100% 100%";
+            lock = 4;  
+        } else {
+            _pl1_life.style.background = "url(images/Sources/left-life" + pl1_life + ".png)";
+            _pl1_life.style.backgroundSize = "100% 100%";
+        }
     }
     setTimeout(pl2_punch, 500);
 }
@@ -392,14 +437,30 @@ function pl2_y(){
     var _pl2 = document.getElementsByClassName("right-" + pl2)[0],
         _po = _pl2.getAttribute('id'),
         _po_bis = document.getElementById(_po),
-        _left = _po_bis.offsetLeft;
+        _left = _po_bis.offsetLeft,
+        _ko = document.getElementById("Timer"),
+        _pl1_life = document.getElementById("pl1-life"),
         _pl1 = document.getElementsByClassName("left-" + pl1)[0];
     
     _pl2.classList.remove("right-" + pl2);
     _pl2.classList.add("right-kick-" + pl2);
     _po_bis.style.left = _left - 100 + "px";
     if (_pl2.offsetLeft <= (_pl1.offsetLeft + 220)){
-        console.log("touché");
+        ++pl1_life;
+        if (pl1_life == 1){
+            _pl2_life.style.display = "inline-block";
+        } else if (pl1_life == 13){
+            _pl1_life.style.background = "url(/images/Sources/left-life" + pl1_life + ".png)";
+            _pl1_life.style.backgroundSize = "100% 100%";
+            _ko.style.display = "block";
+            _ko.style.background = "url(images/Sources/ko.png)";
+            _ko.style.backgroundSize = "100% 100%";
+            _ko.style.display = "block";
+            lock = 4;  
+        } else {
+            _pl1_life.style.background = "url(images/Sources/left-life" + pl1_life + ".png)";
+            _pl1_life.style.backgroundSize = "100% 100%";
+        }
     }
     setTimeout(pl2_kick, 500);
 }

@@ -374,6 +374,30 @@ ul li{
     -webkit-transform: translate(-50%, -50%);
 }
 
+#pl1-life {
+    display: none;
+    position: absolute;
+    width: 510px;
+    height: 35px;
+    background: url("../images/Sources/left-life1.png");
+    background-size: 100% 100%;
+    top: 11.25%;
+    left: 27%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#pl2-life {
+    display: none;
+    position: absolute;
+    width: 510px;
+    height: 35px;
+    background: url("../images/Sources/right-life1.png");
+    background-size: 100% 100%;
+    top: 11.25%;
+    left: 72.75%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
 #Timer{
     width: 37%;
     height: 52%;
@@ -1379,4 +1403,150 @@ ul li{
         background: url("../images/sprites/p5/right/stand10.png");
         background-size: 100% 100%;
     }
+}
+
+@-webkit-keyframes twelve-stand-left{
+    0%{
+        background: url("../images/sprites/p6/left/stand1.png");
+        background-size: 100% 100%;
+    }
+    
+    7.14%{
+        background: url("../images/sprites/p6/left/stand2.png");
+        background-size: 100% 100%;
+    }
+    
+    14.3%{
+        background: url("../images/sprites/p6/left/stand3.png");
+        background-size: 100% 100%;
+    }
+    
+    21.42%{
+        background: url("../images/sprites/p6/left/stand4.png");
+        background-size: 100% 100%;
+    }
+    
+    28.6%{
+        background: url("../images/sprites/p6/left/stand5.png");
+        background-size: 100% 100%;
+    }
+    
+    35.7%{
+        background: url("../images/sprites/p6/left/stand6.png");
+        background-size: 100% 100%;
+    }
+    
+    42.84%{
+        background: url("../images/sprites/p6/left/stand7.png");
+        background-size: 100% 100%;
+    }
+    
+    50%{
+        background: url("../images/sprites/p6/left/stand8.png");
+        background-size: 100% 100%;
+    }
+    
+    57.14%{
+        background: url("../images/sprites/p6/left/stand9.png");
+        background-size: 100% 100%;
+    }
+    
+    64.3%{
+        background: url("../images/sprites/p6/left/stand10.png");
+        background-size: 100% 100%;
+    }
+    
+    71.42%{
+        background: url("../images/sprites/p6/left/stand11.png");
+        background-size: 100% 100%;
+    }
+    
+    78.6%{
+        background: url("../images/sprites/p6/left/stand12.png");
+        background-size: 100% 100%;
+    }
+    
+    85.7%{
+        background: url("../images/sprites/p6/left/stand13.png");
+        background-size: 100% 100%;
+    }
+    
+    92.84%{
+        background: url("../images/sprites/p6/left/stand14.png");
+        background-size: 100% 100%;
+    }
+    
+}
+
+@-webkit-keyframes twelve-stand-right{
+    0%{
+        background: url("../images/sprites/p6/right/stand1.png");
+        background-size: 100% 100%;
+    }
+    
+    7.14%{
+        background: url("../images/sprites/p6/right/stand2.png");
+        background-size: 100% 100%;
+    }
+    
+    14.3%{
+        background: url("../images/sprites/p6/right/stand3.png");
+        background-size: 100% 100%;
+    }
+    
+    21.42%{
+        background: url("../images/sprites/p6/right/stand4.png");
+        background-size: 100% 100%;
+    }
+    
+    28.6%{
+        background: url("../images/sprites/p6/right/stand5.png");
+        background-size: 100% 100%;
+    }
+    
+    35.7%{
+        background: url("../images/sprites/p6/right/stand6.png");
+        background-size: 100% 100%;
+    }
+    
+    42.84%{
+        background: url("../images/sprites/p6/right/stand7.png");
+        background-size: 100% 100%;
+    }
+    
+    50%{
+        background: url("../images/sprites/p6/right/stand8.png");
+        background-size: 100% 100%;
+    }
+    
+    57.14%{
+        background: url("../images/sprites/p6/right/stand9.png");
+        background-size: 100% 100%;
+    }
+    
+    64.3%{
+        background: url("../images/sprites/p6/right/stand10.png");
+        background-size: 100% 100%;
+    }
+    
+    71.42%{
+        background: url("../images/sprites/p6/right/stand11.png");
+        background-size: 100% 100%;
+    }
+    
+    78.6%{
+        background: url("../images/sprites/p6/right/stand12.png");
+        background-size: 100% 100%;
+    }
+    
+    85.7%{
+        background: url("../images/sprites/p6/right/stand13.png");
+        background-size: 100% 100%;
+    }
+    
+    92.84%{
+        background: url("../images/sprites/p6/right/stand14.png");
+        background-size: 100% 100%;
+    }
+    
 }
