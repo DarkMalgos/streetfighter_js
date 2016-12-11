@@ -363,7 +363,7 @@ ul li{
     position: relative;
 }
 
-.lifebar{
+#lifebar{
     background: url('../images/Sources/lifebar.png');
     background-size: 100% 100%;
     width: 89%;
@@ -531,6 +531,8 @@ ul li{
     background: url("../images/sprites/p3/left/stand1.png");
     background-size: 100% 100%;
     top: 63%;
+    -webkit-animation :
+        ken-stand-left 2s alternate infinite;
 }
 
 .left-punch-3{
@@ -557,6 +559,8 @@ ul li{
     background: url("../images/sprites/p3/right/stand1.png");
     background-size: 100% 100%;
     top: 63%;
+    -webkit-animation :
+        ken-stand-right 2s alternate infinite;
 }
 
 .right-punch-3{
@@ -572,6 +576,62 @@ ul li{
     height: 200px;
     width: 190px;
     background: url("../images/sprites/p3/right/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-4{
+    height: 200px;
+    width: 170px;
+    background: url("../images/sprites/p4/left/stand1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    -webkit-animation :
+        makoto-stand-left 2s alternate infinite;
+}
+
+.left-punch-4{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p4/left/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-kick-4{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p4/left/attack3.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.right-4{
+    height: 200px;
+    width: 170px;
+    background: url("../images/sprites/p4/right/stand1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    -webkit-animation :
+        makoto-stand-right 2s alternate infinite;
+}
+
+.right-punch-4{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p4/right/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.right-kick-4{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p4/right/attack3.png");
     background-size: 100% 100%;
     top: 63%;
     z-index: 10;
@@ -628,6 +688,62 @@ ul li{
     height: 200px;
     width: 250px;
     background: url("../images/sprites/p5/right/attack2.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-6{
+    height: 200px;
+    width: 170px;
+    background: url("../images/sprites/p6/left/stand1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    -webkit-animation :
+        twelve-stand-left 2s alternate infinite;
+}
+
+.left-punch-6{
+    height: 200px;
+    width: 190px;
+    background: url("../images/sprites/p6/left/attack1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.left-kick-6{
+    height: 200px;
+    width: 250px;
+    background: url("../images/sprites/p6/left/attack3.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.right-6{
+    height: 200px;
+    width: 170px;
+    background: url("../images/sprites/p6/right/stand1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    -webkit-animation :
+        twelve-stand-right 2s alternate infinite;
+}
+
+.right-punch-6{
+    height: 200px;
+    width: 200px;
+    background: url("../images/sprites/p6/right/attack1.png");
+    background-size: 100% 100%;
+    top: 63%;
+    z-index: 10;
+}
+
+.right-kick-6{
+    height: 200px;
+    width: 250px;
+    background: url("../images/sprites/p6/right/attack3.png");
     background-size: 100% 100%;
     top: 63%;
     z-index: 10;
@@ -795,6 +911,366 @@ ul li{
     }
     66.6%{
         background: url("../images/sprites/p2/right/stand7.png") no-repeat center;
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes ken-stand-right{
+    0%{
+        background: url("../images/sprites/p3/right/stand1.png");
+        background-size: 100% 100%;
+    }
+    
+    10%{
+        background: url("../images/sprites/p3/right/stand2.png");
+        background-size: 100% 100%;
+    }
+    
+    20%{
+        background: url("../images/sprites/p3/right/stand3.png");
+        background-size: 100% 100%;
+    }
+    
+    30%{
+        background: url("../images/sprites/p3/right/stand4.png");
+        background-size: 100% 100%;
+    }
+    
+    40%{
+        background: url("../images/sprites/p3/right/stand5.png");
+        background-size: 100% 100%;
+    }
+    
+    
+    50%{
+        background: url("../images/sprites/p3/right/stand6.png");
+        background-size: 100% 100%;
+    }
+    
+    60%{
+        background: url("../images/sprites/p3/right/stand7.png");
+        background-size: 100% 100%;
+    }
+    
+    70%{
+        background: url("../images/sprites/p3/right/stand8.png");
+        background-size: 100% 100%;
+    }
+    
+    80%{
+        background: url("../images/sprites/p3/right/stand9.png");
+        background-size: 100% 100%;
+    }
+    
+    90%{
+        background: url("../images/sprites/p3/right/stand10.png");
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes ken-stand-left{
+    0%{
+        background: url("../images/sprites/p3/left/stand1.png");
+        background-size: 100% 100%;
+    }
+    
+    10%{
+        background: url("../images/sprites/p3/left/stand2.png");
+        background-size: 100% 100%;
+    }
+    
+    20%{
+        background: url("../images/sprites/p3/left/stand3.png");
+        background-size: 100% 100%;
+    }
+    
+    30%{
+        background: url("../images/sprites/p3/left/stand4.png");
+        background-size: 100% 100%;
+    }
+    
+    40%{
+        background: url("../images/sprites/p3/left/stand5.png");
+        background-size: 100% 100%;
+    }
+    
+    
+    50%{
+        background: url("../images/sprites/p3/left/stand6.png");
+        background-size: 100% 100%;
+    }
+    
+    60%{
+        background: url("../images/sprites/p3/left/stand7.png");
+        background-size: 100% 100%;
+    }
+    
+    70%{
+        background: url("../images/sprites/p3/left/stand8.png");
+        background-size: 100% 100%;
+    }
+    
+    80%{
+        background: url("../images/sprites/p3/left/stand9.png");
+        background-size: 100% 100%;
+    }
+    
+    90%{
+        background: url("../images/sprites/p3/left/stand10.png");
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes makoto-stand-left{
+    0%{
+        background: url("../images/sprites/p4/left/stand1.png");
+        background-size: 100% 100%;
+    }
+    
+    4%{
+        background: url("../images/sprites/p4/left/stand2.png");
+        background-size: 100% 100%;
+    }
+    
+    8%{
+        background: url("../images/sprites/p4/left/stand3.png");
+        background-size: 100% 100%;
+    }
+    
+    12%{
+        background: url("../images/sprites/p4/left/stand4.png");
+        background-size: 100% 100%;
+    }
+    
+    16%{
+        background: url("../images/sprites/p4/left/stand5.png");
+        background-size: 100% 100%;
+    }
+    
+    20%{
+        background: url("../images/sprites/p4/left/stand6.png");
+        background-size: 100% 100%;
+    }
+    
+    24%{
+        background: url("../images/sprites/p4/left/stand7.png");
+        background-size: 100% 100%;
+    }
+    
+    28%{
+        background: url("../images/sprites/p4/left/stand8.png");
+        background-size: 100% 100%;
+    }
+    
+    32%{
+        background: url("../images/sprites/p4/left/stand9.png");
+        background-size: 100% 100%;
+    }
+    
+    36%{
+        background: url("../images/sprites/p4/left/stand10.png");
+        background-size: 100% 100%;
+    }
+    
+    40%{
+        background: url("../images/sprites/p4/left/stand11.png");
+        background-size: 100% 100%;
+    }
+    
+    44%{
+        background: url("../images/sprites/p4/left/stand12.png");
+        background-size: 100% 100%;
+    }
+    
+    48%{
+        background: url("../images/sprites/p4/left/stand13.png");
+        background-size: 100% 100%;
+    }
+    
+    52%{
+        background: url("../images/sprites/p4/left/stand14.png");
+        background-size: 100% 100%;
+    }
+    
+    56%{
+        background: url("../images/sprites/p4/left/stand15.png");
+        background-size: 100% 100%;
+    }
+    
+    60%{
+        background: url("../images/sprites/p4/left/stand16.png");
+        background-size: 100% 100%;
+    }
+    
+    64%{
+        background: url("../images/sprites/p4/left/stand17.png");
+        background-size: 100% 100%;
+    }
+    
+    68%{
+        background: url("../images/sprites/p4/left/stand18.png");
+        background-size: 100% 100%;
+    }
+    
+    72%{
+        background: url("../images/sprites/p4/left/stand19.png");
+        background-size: 100% 100%;
+    }
+    
+    76%{
+        background: url("../images/sprites/p4/left/stand20.png");
+        background-size: 100% 100%;
+    }
+    
+    80%{
+        background: url("../images/sprites/p4/left/stand21.png");
+        background-size: 100% 100%;
+    }
+    
+    84%{
+        background: url("../images/sprites/p4/left/stand22.png");
+        background-size: 100% 100%;
+    }
+    
+    88%{
+        background: url("../images/sprites/p4/left/stand23.png");
+        background-size: 100% 100%;
+    }
+    
+    92%{
+        background: url("../images/sprites/p4/left/stand24.png");
+        background-size: 100% 100%;
+    }
+    
+    96%{
+        background: url("../images/sprites/p4/left/stand25.png");
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes makoto-stand-right{
+    0%{
+        background: url("../images/sprites/p4/right/stand1.png");
+        background-size: 100% 100%;
+    }
+    
+    4%{
+        background: url("../images/sprites/p4/right/stand2.png");
+        background-size: 100% 100%;
+    }
+    
+    8%{
+        background: url("../images/sprites/p4/right/stand3.png");
+        background-size: 100% 100%;
+    }
+    
+    12%{
+        background: url("../images/sprites/p4/right/stand4.png");
+        background-size: 100% 100%;
+    }
+    
+    16%{
+        background: url("../images/sprites/p4/right/stand5.png");
+        background-size: 100% 100%;
+    }
+    
+    20%{
+        background: url("../images/sprites/p4/right/stand6.png");
+        background-size: 100% 100%;
+    }
+    
+    24%{
+        background: url("../images/sprites/p4/right/stand7.png");
+        background-size: 100% 100%;
+    }
+    
+    28%{
+        background: url("../images/sprites/p4/right/stand8.png");
+        background-size: 100% 100%;
+    }
+    
+    32%{
+        background: url("../images/sprites/p4/right/stand9.png");
+        background-size: 100% 100%;
+    }
+    
+    36%{
+        background: url("../images/sprites/p4/right/stand10.png");
+        background-size: 100% 100%;
+    }
+    
+    40%{
+        background: url("../images/sprites/p4/right/stand11.png");
+        background-size: 100% 100%;
+    }
+    
+    44%{
+        background: url("../images/sprites/p4/right/stand12.png");
+        background-size: 100% 100%;
+    }
+    
+    48%{
+        background: url("../images/sprites/p4/right/stand13.png");
+        background-size: 100% 100%;
+    }
+    
+    52%{
+        background: url("../images/sprites/p4/right/stand14.png");
+        background-size: 100% 100%;
+    }
+    
+    56%{
+        background: url("../images/sprites/p4/right/stand15.png");
+        background-size: 100% 100%;
+    }
+    
+    60%{
+        background: url("../images/sprites/p4/right/stand16.png");
+        background-size: 100% 100%;
+    }
+    
+    64%{
+        background: url("../images/sprites/p4/left/stand17.png");
+        background-size: 100% 100%;
+    }
+    
+    68%{
+        background: url("../images/sprites/p4/left/stand18.png");
+        background-size: 100% 100%;
+    }
+    
+    72%{
+        background: url("../images/sprites/p4/left/stand19.png");
+        background-size: 100% 100%;
+    }
+    
+    76%{
+        background: url("../images/sprites/p4/left/stand20.png");
+        background-size: 100% 100%;
+    }
+    
+    80%{
+        background: url("../images/sprites/p4/left/stand21.png");
+        background-size: 100% 100%;
+    }
+    
+    84%{
+        background: url("../images/sprites/p4/left/stand22.png");
+        background-size: 100% 100%;
+    }
+    
+    88%{
+        background: url("../images/sprites/p4/left/stand23.png");
+        background-size: 100% 100%;
+    }
+    
+    92%{
+        background: url("../images/sprites/p4/left/stand24.png");
+        background-size: 100% 100%;
+    }
+    
+    96%{
+        background: url("../images/sprites/p4/left/stand25.png");
         background-size: 100% 100%;
     }
 }
