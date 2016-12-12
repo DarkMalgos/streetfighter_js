@@ -464,7 +464,7 @@ function pl2_y(){
     if (_pl2.offsetLeft <= (_pl1.offsetLeft + 220)){
         ++pl1_life;
         if (pl1_life == 1){
-            _pl2_life.style.display = "inline-block";
+            _pl1_life.style.display = "inline-block";
         } else if (pl1_life == 13){
             _pl1_life.style.background = "url(/images/Sources/left-life" + pl1_life + ".png)";
             _pl1_life.style.backgroundSize = "100% 100%";
@@ -593,7 +593,11 @@ function restart(){
     _ko.style.display = "none";
     _re.style.display = "none";
     _e2.style.display = "none";
+    _pl1_life.style.background = "url(images/Sources/left-life1.png)"
+    _pl1_life.style.backgroundSize = "100% 100%";
     _pl1_life.style.display = "none";
+    _pl2_life.style.background = "url(images/Sources/right-life1.png)"
+    _pl2_life.style.backgroundSize = "100% 100%";
     _pl2_life.style.display = "none";
     _pl1.classList.remove("left-" + pl1);
     _pl2.classList.remove("right-" + pl2);
