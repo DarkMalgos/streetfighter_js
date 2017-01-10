@@ -2,7 +2,7 @@
 **Streetfighter with javascript only !**
 ========================
 
-by [Brieuc CAILLOT], [Florian SAUMUROT]
+by Brieuc CAILLOT, Florian SAUMUROT
 ----------
 
 Informations :
